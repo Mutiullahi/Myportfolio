@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+body{
+    background: #080808;
+    color: #ffff;
+}
+.logo{
+    font-size: 20px;
+}
+.header-one{
+    background: linear-gradient(to top, rgba(224, 6, 6, 0.637), rgba(128, 0, 128, 0.707)), url("./img1.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem 0 2rem;
+    align-items: center;
+}
+.nav-link{
+    display: flex;
+}
+.nav-link li{
+    list-style: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.nav-link li a{
+    color: #ffff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+.nav-link li a:hover{
+    background-color: blue;
+}
+.toggle-one{
+    font-size: 40px;
+    background-color: blue;
+    padding:  0px 7px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.toggle-two{
+    font-size: 25px;
+    background-color: blue;
+    padding:  0px 7px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.togle{
+    background-color: red;
+    width: 100%;
+    position: relative;
+    height: 3rem;
+}
+.banner{
+    display: flex;
+    align-items: center;
+    height: 80%;
+    margin-left: 4rem;
+}
+.welcome{
+    color: rgb(209, 14, 0);
+}
+.banner button{
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    background-color: rgba(191, 2, 191, 0.881);
+    margin-top: 5rem;
+}
+.banner button a{
+    text-decoration: none;
+    color: #ffff;
+}
+.banner-cut{
+    display: grid;
+    position: relative;
+}
+.logo-img{
+    background-color: rgba(3, 2, 49, 0.72);
+    padding: .9rem;
+    border-radius: 5px;
+    width: 11rem;
+    position: absolute;
+    right: 10%;
+    top: 4rem;
+    box-shadow: 0 0 10px 3px rgb(255, 0, 68);
+}
+.logo-one{
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* comment */
+.comment{
+    text-align: center;
+    margin: 10%;
+}
+.comment form{
+    display: grid;
+    margin: 1rem;
+}
+.comment form input,textarea{
+    padding: 7px;
+    margin: 10px;
+}
+.comment form button{
+    background-color: blue;
+    padding: 8px;
+    border: none;
+    color: #ffff;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+/* services */
+#service{
+    margin: 0rem 5rem 0rem 5rem;
+}
+.services{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-gap: 5%;
+}
+.app-one{
+    background-color: #3b3b3f;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+.app-one p{
+    font-size: 13px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.app-one a{
+    text-decoration: none;
+    font-size: 15px;
+    color: red;
+}
+.app-one:hover{
+    background-color: rgb(101, 25, 171);
+    transition-duration: 1s;
+}
+/* footer */
+footer{
+    background-color: #313131;
+}
+.foot-all{
+    display: flex;
+    justify-content: space-around;
+}
+.quicklinks ul li, .contact ul li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h2{
+    color: rgb(242, 4, 44);
+}
+.copyright{
+    text-align: center;
+}
+
+/* desktop device */
+@media screen and (min-width: 900px) {
+    .toggle-one, .toggle-two{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 567px) and (max-width: 899px) {
+    .header-one{
+        height: 60vh;
+    }
+    .nav-link{
+        display: none;
+    }
+    .nav-link li{
+        border-bottom: 1px solid #ffff;
+        padding: 1rem;
+        margin: 0;
+    }
+    .nav-link li a:hover{
+        background: none;
+        color: red;
+        margin-left: 2rem;
+        transition: 0.5s;
+    }
+    .open{
+        display: block;
+        position: absolute;
+        background-color: #080808c8;
+        width: 90%;
+        top: 4rem;
+        z-index: 1;
+    }
+    .toggle-two{
+        position: absolute;
+        right: 1rem;
+        top: .5rem;
+    }
+    .foot-all{
+        display: grid;
+    }
+    .banner{
+        height: 60%;
+        margin: 1rem;
+    }
+    .banner-cut{
+        display: grid;
+        position: relative;
+    }
+    .welcome{
+        font-size: 25px;
+        text-align: center;
+    }
+    .logo-img{
+        top: 7rem;
+    }
+    .services{
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-gap: 1rem;
+    }
+}
+/* for android */
+@media screen and (min-width: 0px) and (max-width: 566px) {
+    .header-one{
+        height: 60vh;
+    }
+    .nav-link{
+        display: none;
+    }
+    .nav-link li{
+        border-bottom: 1px solid #ffff;
+        padding: 1rem;
+        margin: 0;
+    }
+    .nav-link li a:hover{
+        background: none;
+        color: red;
+        margin-left: 2rem;
+        transition: 0.5s;
+    }
+    .open{
+        display: block;
+        position: absolute;
+        background-color: #080808c8;
+        width: 90%;
+        top: 4rem;
+        z-index: 1;
+    }
+    .toggle-two{
+        position: absolute;
+        right: 1rem;
+        top: .5rem;
+    }
+    .foot-all{
+        display: grid;
+    }
+    .banner{
+        height: 60%;
+        margin: 1rem;
+    }
+    .banner-cut{
+        display: grid;
+        position: relative;
+    }
+    .welcome{
+        font-size: 25px;
+        text-align: center;
+    }
+    .logo-img{
+        top: 7rem;
+    }
+    .services{
+        display: grid;
+        grid-template-columns: repeat(1, 90%);
+        grid-gap: 1rem;
+    }
+}
