@@ -41,16 +41,14 @@ body{
     background-color: blue;
 }
 .toggle-one{
-    font-size: 40px;
+    font-size: 35px;
     background-color: blue;
-    padding:  0px 7px;
+    padding:  5px 9px;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 .toggle-two{
-    font-size: 25px;
-    background-color: blue;
-    padding:  0px 7px;
+    font-size: 35px;
     cursor: pointer;
     border-radius: 3px;
 }
@@ -136,8 +134,11 @@ body{
     padding: 1rem;
     margin-top: 1rem;
 }
+.app-one strong i{
+    font-size: 30px;
+}
 .app-one p{
-    font-size: 13px;
+    font-size: 16px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -283,7 +284,7 @@ h2{
     }
     .services{
         display: grid;
-        grid-template-columns: repeat(1, 90%);
+        grid-template-columns: repeat(1, 100%);
         grid-gap: 1rem;
     }
 }
