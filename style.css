@@ -122,13 +122,13 @@ body{
     margin-top: 1rem;
 }
 /* services */
-#service, #port{
-    margin: 5rem;
+#service, #port, #about{
+    margin: 2rem;
 }
 .services{
     display: grid;
-    grid-template-columns: repeat(3, 30%);
-    grid-gap: 5%;
+    grid-template-columns: repeat(3, 32%);
+    grid-gap: 1rem;
 }
 .app-one{
     background-color: #3b3b3f;
@@ -140,7 +140,7 @@ body{
     font-size: 30px;
 }
 .app-one p{
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -175,16 +175,24 @@ h2{
     font-size: 22px;
 }
 .image-me{
-    height: 17rem;
-    width: 17rem;
+    height: 20rem;
+    width: 20rem;
     box-shadow: 0px 0px 9px 5px red;
     margin: 1rem;
+    background-image: url("./img-me.jpg");
+    background-size: cover;
+}
+.about-me-split{
+    display: grid;
+    grid-template-columns: repeat(2,40%);
+    gap: 1rem;
+    width: 100%;
 }
 /* my workd */
 
 .myworks{
     display: grid;
-    grid-template-columns: repeat(4,17rem);
+    grid-template-columns: repeat(4,24%);
     gap: 1rem;
 }
 .works-list{
@@ -210,7 +218,7 @@ h2{
     border-radius: 5px;
     padding: 10px 16px;
     margin-top: 1rem;
-    width: 30%;
+    font-size: 20px;
 }
 .works-list:hover .inks{
     display: block;
@@ -283,7 +291,7 @@ h2{
         position: relative;
     }
     .welcome{
-        font-size: 25px;
+        font-size: 30px;
         text-align: center;
     }
     .logo-img{
@@ -291,19 +299,25 @@ h2{
     }
     .services{
         display: grid;
-        grid-template-columns: repeat(2,45%);
+        grid-template-columns: repeat(2,50%);
         grid-gap: 1rem;
     }
-    #service{
-        margin: 0rem 3rem 0rem 3rem;
+    #service, #port, #about{
+        margin: 3rem 3rem 5rem 3rem;
     }
     .app-one p{
         font-size: 20px;
     }
     .myworks{
         display: grid;
-        grid-template-columns: repeat(2,15rem);
+        grid-template-columns: repeat(2,50%);
         gap: 1rem;
+    }
+    .about-me-split{
+        display: grid;
+        grid-template-columns: repeat(1,90%);
+        gap: 1rem;
+        width: 100%;
     }
 }
 /* for android */
@@ -352,25 +366,39 @@ h2{
     .welcome{
         font-size: 20px;
         text-align: center;
-
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     .logo-img{
-        top: 8rem;
+        top: 11rem;
+        right: 1rem;
     }
     .services{
         display: grid;
         grid-template-columns: repeat(1, 95%);
         grid-gap: 1rem;
     }
-    #service{
-        margin: 0rem 2rem 0rem 1rem;
+    #service, #port, #about{
+        margin: 8rem 1rem 8rem 2rem;
     }
     .app-one p{
         font-size: 25px;
     }
     .myworks{
         display: grid;
+        grid-template-columns: repeat(1,95%);
+        gap: 1rem;
+    }
+    .image-me{
+        height: 20rem;
+        width: 90%;
+        box-shadow: 0px 0px 9px 5px red;
+        margin: 1rem;
+        
+    }
+    .about-me-split{
+        display: grid;
         grid-template-columns: repeat(1,90%);
         gap: 1rem;
+        width: 100%;
     }
 }
