@@ -315,7 +315,7 @@ h2{
 
 @media screen and (min-width: 567px) and (max-width: 899px) {
     .header-one,.header-two,.header-three, .header-four{
-        height: 60vh;
+        height: 80vh;
     }
     .nav-link{
         display: none;
@@ -335,9 +335,11 @@ h2{
         display: block;
         position: absolute;
         background-color: #080808c8;
-        width: 90%;
+        width: 100%;
         top: 4rem;
         z-index: 1;
+        margin: 0;
+        right: .1rem;
     }
     .toggle-two{
         position: absolute;
@@ -348,7 +350,7 @@ h2{
         display: grid;
     }
     .banner{
-        height: 60%;
+        height: 80%;
         margin: 1rem;
     }
     .banner-cut{
@@ -368,7 +370,7 @@ h2{
         font-size: 30px;
     }
     .logo-img{
-        top: 11.3rem;
+        top: 14rem;
         right: 1rem;
     }
     .services{
@@ -396,8 +398,8 @@ h2{
 }
 /* for android */
 @media screen and (min-width: 0px) and (max-width: 566px) {
-    .header-one,.header-two,.header-three, .header-four{
-        height: 60vh;
+    .header-one, .header-two, .header-three, .header-four{
+        height: 80vh;
     }
     .nav-link{
         display: none;
@@ -430,7 +432,7 @@ h2{
         display: grid;
     }
     .banner{
-        height: 75%;
+        height: 70%;
         margin: 1rem;
     }
     .other-banner{
@@ -459,8 +461,8 @@ h2{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     .logo-img{
-        top: 13.1rem;
-        right: .1rem;
+        top: 17rem;
+        right: 1rem;
     }
     .services{
         display: grid;
