@@ -9,7 +9,9 @@ body{
     color: #ffff;
 }
 .logo{
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .header-one{
     background: linear-gradient(to top, rgba(224, 6, 6, 0.637), rgba(128, 0, 128, 0.707)), url("./img1.jpg");
@@ -65,9 +67,12 @@ body{
     margin-left: 4rem;
 }
 .welcome{
-    color: navy;
+    color: #ffff;
     font-size: 45px;
     font-weight: 700;
+}
+.welcome span{
+    color: rgb(255, 0, 0);
 }
 .banner button{
     padding: 10px 30px;
@@ -85,18 +90,24 @@ body{
     display: grid;
     position: relative;
 }
+.banner-welcome p{
+    width: 50%;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: monospace;
+}
 .logo-img{
     background-color: rgba(3, 2, 49, 0.72);
-    padding: .9rem;
+    padding: .6rem;
     border-radius: 5px;
-    width: 11rem;
+    width: 10rem;
     position: absolute;
-    right: 10%;
-    top: 6rem;
+    right: 10rem;
+    top: 8rem;
     box-shadow: 0 0 10px 3px rgb(255, 0, 68);
 }
 .logo-one{
-    width: 150px;
+    width: 140px;
     border-radius: 50%;
 }
 
@@ -156,6 +167,7 @@ body{
 /* footer */
 footer{
     background-color: #313131;
+    padding: 1rem;
 }
 .foot-all{
     display: flex;
@@ -172,7 +184,7 @@ h2{
 }
 .copyright{
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
 }
 .image-me{
     height: 20rem;
@@ -212,13 +224,16 @@ h2{
 }
 .links{
     text-align: center;
-    color: #ffff;
     border: 1px solid red;
     background-color: rgba(255, 0, 0, 0.507);
     border-radius: 5px;
     padding: 10px 16px;
     margin-top: 1rem;
     font-size: 20px;
+}
+.links a{
+    color: #ffff;
+    text-decoration: none;
 }
 .works-list:hover .inks{
     display: block;
@@ -290,12 +305,18 @@ h2{
         display: grid;
         position: relative;
     }
+    .banner-welcome p{
+        width: 100%;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: monospace;
+    }
     .welcome{
         font-size: 30px;
-        text-align: center;
     }
     .logo-img{
-        top: 7rem;
+        top: 11.3rem;
+        right: 1rem;
     }
     .services{
         display: grid;
@@ -356,21 +377,26 @@ h2{
         display: grid;
     }
     .banner{
-        height: 60%;
+        height: 75%;
         margin: 1rem;
     }
     .banner-cut{
         display: grid;
         position: relative;
     }
+    .banner-welcome p{
+        width: 100%;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: monospace;
+    }
     .welcome{
         font-size: 20px;
-        text-align: center;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     .logo-img{
-        top: 11rem;
-        right: 1rem;
+        top: 13.1rem;
+        right: .1rem;
     }
     .services{
         display: grid;
