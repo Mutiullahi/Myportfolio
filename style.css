@@ -19,6 +19,24 @@ body{
     width: 100%;
     height: 100vh;
 }
+.header-two{
+    background: linear-gradient(to top, rgba(224, 6, 6, 0.637), rgba(128, 0, 128, 0.707)), url("./coding.png");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.header-three{
+    background: linear-gradient(to top, rgba(224, 6, 6, 0.637), rgba(128, 0, 128, 0.707)), url("./laptop1.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.header-four{
+    background: linear-gradient(to top, rgba(224, 6, 6, 0.637), rgba(128, 0, 128, 0.707)), url("./laptop.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
 .nav{
     display: flex;
     justify-content: space-between;
@@ -66,6 +84,15 @@ body{
     height: 80%;
     margin-left: 4rem;
 }
+.other-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.other-banner h1{
+    text-align: center;
+}
 .welcome{
     color: #ffff;
     font-size: 45px;
@@ -110,7 +137,26 @@ body{
     width: 140px;
     border-radius: 50%;
 }
-
+.more{
+    text-align: center;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.notice{
+    margin: 2rem;
+    background-color: rgba(255, 0, 68, 0.864);
+    padding: 1rem;
+    border-radius: 7px;
+    text-align: center;
+}
+.notice h3{
+    font-size: 20px;
+    margin-bottom: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.notice button{
+    margin-top: 2rem;
+}
 /* comment */
 .comment{
     text-align: center;
@@ -133,7 +179,7 @@ body{
     margin-top: 1rem;
 }
 /* services */
-#service, #port, #about{
+#service, #port, #about, #overview{
     margin: 2rem;
 }
 .services{
@@ -178,6 +224,10 @@ footer{
     margin-bottom: 10px;
     list-style: none;
     font-size: 20px;
+}
+.quicklinks ul li a{
+    color: #ffff;
+    text-decoration: none;
 }
 h2{
     color: rgb(242, 4, 44);
@@ -264,7 +314,7 @@ h2{
 }
 
 @media screen and (min-width: 567px) and (max-width: 899px) {
-    .header-one{
+    .header-one,.header-two,.header-three, .header-four{
         height: 60vh;
     }
     .nav-link{
@@ -311,6 +361,9 @@ h2{
         font-weight: 600;
         font-family: monospace;
     }
+    .more{
+        display: none;
+    }
     .welcome{
         font-size: 30px;
     }
@@ -323,7 +376,7 @@ h2{
         grid-template-columns: repeat(2,50%);
         grid-gap: 1rem;
     }
-    #service, #port, #about{
+    #service, #port, #about, #overview{
         margin: 3rem 3rem 5rem 3rem;
     }
     .app-one p{
@@ -343,7 +396,7 @@ h2{
 }
 /* for android */
 @media screen and (min-width: 0px) and (max-width: 566px) {
-    .header-one{
+    .header-one,.header-two,.header-three, .header-four{
         height: 60vh;
     }
     .nav-link{
@@ -380,6 +433,17 @@ h2{
         height: 75%;
         margin: 1rem;
     }
+    .other-banner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .other-banner h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .banner-cut{
         display: grid;
         position: relative;
@@ -403,7 +467,7 @@ h2{
         grid-template-columns: repeat(1, 95%);
         grid-gap: 1rem;
     }
-    #service, #port, #about{
+    #service, #port, #about, #overview{
         margin: 8rem 1rem 8rem 2rem;
     }
     .app-one p{
@@ -420,6 +484,9 @@ h2{
         box-shadow: 0px 0px 9px 5px red;
         margin: 1rem;
         
+    }
+    .more{
+        display: none;
     }
     .about-me-split{
         display: grid;
