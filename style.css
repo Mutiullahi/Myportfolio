@@ -37,6 +37,12 @@ body{
     width: 100%;
     height: 50rem;
 }
+.header-five{
+    background: linear-gradient(to top, rgba(224, 6, 6, 0.637), rgba(128, 0, 128, 0.707)), url("./images/img-me.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 50rem;
+}
 .nav{
     display: flex;
     justify-content: space-between;
@@ -97,6 +103,19 @@ body{
     color: #ffff;
     font-size: 45px;
     font-weight: 700;
+    margin-left: 1.5rem;
+    position: relative;
+    animation-name: welcome;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes welcome{
+    0%{
+        top: -1000px;
+    }
+    100%{
+        top: 150px;
+    }
 }
 .welcome span{
     color: rgb(255, 0, 0);
@@ -105,9 +124,27 @@ body{
     padding: 10px 30px;
     border-radius: 5px;
     border: none;
-    font-size: 16px;
-    background-color: rgba(191, 2, 191, 0.881);
+    font-size: 17px;
+    border: 2px solid navy;
+    background: none;
     margin-top: 5rem;
+    font-weight: 700;
+    transition-property: transform;
+    transition-duration: 1s;
+    animation-name: button;
+    animation-duration: 5s;
+    position: relative;
+}
+@keyframes button{
+    0%{
+        bottom: -1000px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+.banner button:hover{
+    transform: rotateY(180deg);
 }
 .banner button a{
     text-decoration: none;
@@ -122,6 +159,17 @@ body{
     font-size: 20px;
     font-weight: 600;
     font-family: monospace;
+    animation-name: text;
+    animation-duration: 5s;
+    position: relative;
+}
+@keyframes text{
+    0%{
+        left: -1000px;
+    }
+    100%{
+        left: 0;
+    }
 }
 .logo-img{
     background-color: rgba(3, 2, 49, 0.72);
@@ -284,7 +332,8 @@ h2{
     text-align: center;
     color: #ffff;
     padding: 0px 9px 0px 9px;
-    display: none;
+    border-radius: 10px;
+    opacity: 0;
 }
 .links{
     text-align: center;
@@ -300,13 +349,20 @@ h2{
     text-decoration: none;
 }
 .works-list:hover .inks{
-    display: block;
-    animation: animate bottom;
-    animation-duration: 2s;
+    animation: animate;
+    animation-duration: 1.5s;
+    position: relative;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
 @keyframes animate{
     0%{
-
+        bottom: -20rem;
+        opacity: -2;
+    }
+    100%{
+        bottom: 0rem;
+        opacity: 1;
     }
 }
 .inks h3{
@@ -356,8 +412,8 @@ h2{
 }
 /* tablets device */
 @media screen and (min-width: 567px) and (max-width: 899px) {
-    .header-one,.header-two,.header-three, .header-four{
-        height: 40rem;
+    .header-one,.header-two,.header-three, .header-four,.header-five{
+        height: 45rem;
     }
     .nav-link{
         display: none;
@@ -412,7 +468,7 @@ h2{
         font-size: 30px;
     }
     .logo-img{
-        top: 14rem;
+        top: 11rem;
         right: 1rem;
     }
     .services{
@@ -440,7 +496,7 @@ h2{
 }
 /* for android */
 @media screen and (min-width: 0px) and (max-width: 566px) {
-    .header-one, .header-two, .header-three, .header-four{
+    .header-one, .header-two, .header-three, .header-four,.header-five{
         height: 45rem;
     }
     .nav-link{
@@ -500,12 +556,12 @@ h2{
         font-family: monospace;
     }
     .welcome{
-        font-size: 20px;
+        font-size: 35px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     .logo-img{
-        top: 17rem;
-        right: .6rem;
+        top: 13rem;
+        right: 1rem;
     }
     .services{
         display: grid;
