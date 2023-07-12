@@ -221,7 +221,8 @@ body{
 .comment form input,textarea{
     padding: 7px;
     background: none;
-    border: 2px solid wheat;
+    border-radius: 5px;
+    border: 1px solid #fff;
     outline: none;
     padding: 10px;
     margin:  10px 0 10px 0;
@@ -321,10 +322,16 @@ h2{
 }
 .works-list{
     background: url("./images/img.jpg") no-repeat;
-    height: 20rem;
     background-size: cover;
     border-radius: 1rem;
     position: relative;
+}
+.works-list-one{
+    background: url("./images/leon_website.png") no-repeat;
+    height: 20rem;
+    border-radius: 1rem;
+    position: relative;
+    background-size: 100%;
 }
 .inks{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.734), rgba(255, 0, 0, 0.882));
@@ -400,9 +407,16 @@ h2{
     color: rgb(255, 115, 0);
 }
 .cts i{
-    font-size: 20px;
+    font-size: 23px;
     color: red;
     margin-right: 5px;
+}
+.my-bio{
+    margin: 2rem;
+}
+.story{
+    text-align: center;
+    margin-bottom: 1rem;
 }
 /* desktop device */
 @media screen and (min-width: 900px) {
@@ -560,7 +574,7 @@ h2{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     .logo-img{
-        top: 13rem;
+        top: 15rem;
         right: 1rem;
     }
     .services{
@@ -581,7 +595,7 @@ h2{
     }
     .image-me{
         height: 20rem;
-        width: 90%;
+        width: 100%;
         box-shadow: 0px 0px 9px 5px red;
         margin: 1rem;
         
@@ -594,5 +608,13 @@ h2{
         grid-template-columns: repeat(1,90%);
         gap: 1rem;
         width: 100%;
+    }
+    @keyframes welcome{
+        0%{
+            top: -1000px;
+        }
+        100%{
+            top: 100px;
+        }
     }
 }

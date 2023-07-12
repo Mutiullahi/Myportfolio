@@ -55,13 +55,13 @@
     </div>
     <div class="comment">
         <h3>Let Us know How We May Help You</h3> <hr>
-        <form action="#" method="post">
+        <form onsubmit="sendEmail(); reset(); return false;">
         <label for="full Names"> Full Name</label>
-        <input type="text"  placeholder="Enter your Names" required>
+        <input type="text"  id="name" placeholder="Enter your Names" required>
         <label for="Emails">Email</label>
-        <input type="text" placeholder="Enter your Email" required>
+        <input type="email" id="email" placeholder="Enter your Email" required>
         <label for="comment">Comments</label>
-        <textarea name="" id="" cols="30" rows="10" placeholder="Type a Messsage . . . . . "></textarea>
+        <textarea name="" id="message" cols="30" rows="10" placeholder="Type a Messsage . . . . . " required></textarea>
         <button type="submit">SEND MESSAGE</button>
         </form>
     </div>
@@ -118,5 +118,6 @@
     </footer>
 </body>
 <script src="./script.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="https://kit.fontawesome.com/1cecaba7bb.js" crossorigin="anonymous"></script>
 </html>
