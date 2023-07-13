@@ -7,19 +7,41 @@ function closenav(){
     toogle.classList.remove("open")
 }
 // sending form directly to the email
+// var submit = document.getElementById('btn');
 
-function sendEmail(){
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "ahmadmutiullahi@gmail.com",
-        Password : "168C6E225692D3AEBEC363A6E34D26EA2198",
-        To : 'ahmadmutiullahi@gmail.com',
-        From : document.getElementById("email").value,
-        Subject : "FOR OFFICIAL ONLY",
-        Body : "Name :" + document.getElementById("name").value
-                + " <br> Email :" + document.getElementById("email").value
-                +" <br> message :" + document.getElementById("message").value
-    }).then(
-      message => alert(message)
-    );
-}
+// submit.addEventListener('click', function(e){
+//     e.preventDefault()
+//     var Name = document.getElementById('name').value;
+// var Email = document.getElementById('email').value;
+// var Subject = document.getElementById('subject').value;
+// var message = document.getElementById('message').value;
+//     Email.send({
+//         Host : "smtp.elasticemail.com",
+//         Username : "ahmadmutiullahi@gmail.com",
+//         Password : "ltztymqaypvisagr",
+//         To : 'ahmadmutiullahi@gmail.com',
+//         From : Email,
+//         Subject : "This is the subject",
+//         Body : "And this is the body"
+//     }).then(
+//       message => alert(message)
+//     );
+// })
+// var Name = document.getElementById('name').value;
+//     var Email = document.getElementById('email').value;
+//     var Subject = document.getElementById('subject').value;
+//     var message = document.getElementById('message').value;
+// function sendEmail(){
+    
+//         Email.send({
+//             Host : "smtp.elasticemail.com",
+//             Username : "ahmadmutiullahi@gmail.com",
+//             Password : "ltztymqaypvisagr",
+//             To : 'ahmadmutiullahi@gmail.com',
+//             From : document.getElementById('email').value,
+//             Subject : document.getElementById('subject').value,
+//             Body : "message + Name",
+//         }).then(
+//           message => alert(message)
+//         );
+// }

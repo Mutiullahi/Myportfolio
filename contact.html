@@ -55,14 +55,27 @@
     </div>
     <div class="comment">
         <h3>Let Us know How We May Help You</h3> <hr>
-        <form onsubmit="sendEmail(); reset(); return false;">
-        <label for="full Names"> Full Name</label>
-        <input type="text"  id="name" placeholder="Enter your Names" required>
-        <label for="Emails">Email</label>
-        <input type="email" id="email" placeholder="Enter your Email" required>
-        <label for="comment">Comments</label>
-        <textarea name="" id="message" cols="30" rows="10" placeholder="Type a Messsage . . . . . " required></textarea>
-        <button type="submit">SEND MESSAGE</button>
+        <form action="https://formsubmit.co/ahmadmutiullahi@gmail.com" method="POST" >
+            <!-- honeypot -->
+            <input type="text" name="_honey" style="display: none;">
+            <!-- disable capchat -->
+            <input type="hidden" name="_captcha" value="false">
+            <!-- next page -->
+            <input type="hidden" name="_next" value="https://mutiullahi.github.io/myportfolio/success.html">
+
+        <label for="name"> Full Name</label>
+        <input type="text" name="Full Name" id="Full Name" placeholder="Enter your Full Name" required autocomplete="off">
+
+        <label for="email">Email</label>
+        <input type="email" name="Emaill address" id="email" placeholder="Enter your Email" required  autocomplete="off">
+
+        <label for="subject">Subject</label>
+        <input type="text" name="Subject" id="subject" placeholder="Subject" required  autocomplete="off">
+
+        <label for="message">Comments</label>
+        <textarea id="message" name="Message" cols="30" rows="10" placeholder="Type a Messsage . . . . . " required></textarea>
+
+        <button type="submit" id="btn">SEND MESSAGE</button>
         </form>
     </div>
 
@@ -118,6 +131,6 @@
     </footer>
 </body>
 <script src="./script.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
+
 <script src="https://kit.fontawesome.com/1cecaba7bb.js" crossorigin="anonymous"></script>
 </html>
