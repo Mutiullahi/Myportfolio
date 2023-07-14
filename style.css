@@ -46,7 +46,7 @@ body{
 .nav{
     display: flex;
     justify-content: space-between;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1.5rem 1rem 0 1rem;
     align-items: center;
 }
 .nav-link{
@@ -251,6 +251,7 @@ body{
     border-radius: 10px;
     padding: 1rem;
     margin-top: 1rem;
+    position: relative;
 }
 .app-one strong i{
     font-size: 30px;
@@ -267,7 +268,19 @@ body{
 }
 .app-one:hover{
     background-color: rgb(101, 25, 171);
-    transition-duration: 1s;
+    animation-name: appone;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes appone{
+    from{
+        padding: 1rem;
+        font-size: 18px;
+    }
+    to{
+        padding: 1.5rem;
+        font-size: 20px;
+    }
 }
 /* footer */
 footer{
@@ -317,21 +330,15 @@ h2{
 
 .myworks{
     display: grid;
-    grid-template-columns: repeat(4,24%);
+    grid-template-columns: repeat(3,32%);
     gap: 1rem;
+    align-items: center;
 }
 .works-list{
     background: url("./images/img.jpg") no-repeat;
     background-size: cover;
-    border-radius: 1rem;
+    border-radius: 10px;
     position: relative;
-}
-.works-list-one{
-    background: url("./images/leon_website.png") no-repeat;
-    height: 20rem;
-    border-radius: 1rem;
-    position: relative;
-    background-size: 100%;
 }
 .inks{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.734), rgba(255, 0, 0, 0.882));
@@ -357,7 +364,7 @@ h2{
 }
 .works-list:hover .inks{
     animation: animate;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
     position: relative;
     animation-direction: alternate;
     animation-fill-mode: forwards;
@@ -452,6 +459,16 @@ h2{
         z-index: 1;
         margin: 0;
         right: .1rem;
+        animation-name: opentoggle;
+        animation-duration: 0.5s;
+    }
+    @keyframes opentoggle{
+        from{
+            left: -1000px;
+        }
+        to{
+            left: 0px;
+        }
     }
     .toggle-two{
         position: absolute;
@@ -536,6 +553,15 @@ h2{
         right: .01rem;
         z-index: 1;
         margin: 0;
+        animation: opentoggle 0.5s;
+    }
+    @keyframes opentoggle{
+        from{
+            left: -1000px;
+        }
+        to{
+            left: 0px;
+        }
     }
     .toggle-two{
         position: absolute;
@@ -574,7 +600,7 @@ h2{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     .logo-img{
-        top: 15rem;
+        top: 17rem;
         right: 1rem;
     }
     .services{
