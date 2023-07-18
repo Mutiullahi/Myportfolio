@@ -104,7 +104,6 @@ body{
     color: #ffff;
     font-size: 45px;
     font-weight: 700;
-    margin-left: 1.5rem;
     position: relative;
     animation-name: welcome;
     animation-duration: 3s;
@@ -185,6 +184,42 @@ body{
 .logo-one{
     width: 140px;
     border-radius: 50%;
+}
+.other-banner-content{
+    animation-name: logo;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    position: relative;
+    top: 0;
+}
+@keyframes logo{
+    from{
+        top: -1000px;
+    }
+    to{
+        top: -50px;
+    }
+}
+.other-banner-content h3{
+    font-size: 25px;
+    text-align: center;
+}
+.paragraph{
+    text-align: center;
+    margin: 10%;
+    animation-name: paragraph;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    position: relative;
+    bottom: 0;
+}
+@keyframes paragraph{
+    from{
+        bottom: -500px;
+    }
+    to{
+        bottom: 20px;
+    }
 }
 .more{
     text-align: center;
@@ -429,17 +464,17 @@ h2{
 .animate-about-me .animate-me{
     font-size: 30px;
     font-weight: 600;
+    margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .animate-about-me ul{
     margin-left: 10px;
-    line-height: 40px;
     height: 35px;
     overflow: hidden;
 }
 @keyframes slide{
     100%{
-        top: -125px;
+        top: -120px;
     }
 }
 .animate-about-me ul li span::after{
@@ -468,7 +503,7 @@ h2{
     color: rgb(255, 0, 119);
     top: 0;
     position: relative;
-    line-height: 40px;
+    line-height: 38px;
     animation: slide 12s steps(3) infinite;
     overflow: hidden;
 }
@@ -686,5 +721,8 @@ h2{
         100%{
             top: -30px;
         }
+    }
+    .other-banner-content h3{
+        font-size: 17px;
     }
 }
