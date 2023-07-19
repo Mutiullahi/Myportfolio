@@ -47,14 +47,7 @@
                 
             </div>
             <div class="other-me">
-                <div class="animate-about-me">
-                    <div class="animate-me">I AM</div>
-                    <ul>
-                        <li> <span>MUTIULLAHI AHMAD</span></li>
-                        <li> <span>UI/UX DESIGN</span></li>
-                        <li> <span>CREATIVE DESIGN</span></li>
-                    </ul>
-                </div>
+                    <h1> I AM <span class="input"> </span></h1>
                 <h2>MY SKILLS</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus,
                      molestiae placeat veritatis expedita accusantium omnis vitae rem est 
@@ -179,5 +172,14 @@
     </footer>
 </body>
 <script src="./script.js"></script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 <script src="https://kit.fontawesome.com/1cecaba7bb.js" crossorigin="anonymous"></script>
+<script>
+    var typed = new Typed(".input",{
+    strings:["Mutiullahi Ahmad", "Web Developer", "UI/UX Designer", "Creative Design"],
+    typeSpeed:70,
+    backSpeed:65,
+    loop:true
+})
+</script>
 </html>

@@ -6,3 +6,5 @@ function opennav(){
 function closenav(){
     toogle.classList.remove("open")
 }
+
+
