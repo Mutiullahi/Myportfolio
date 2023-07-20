@@ -7,7 +7,7 @@
 body{
     background: #080808;
     color: #ffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'roboto slab', sans-serif;
 }
 .logo{
     font-size: 25px;
@@ -461,6 +461,119 @@ h2{
     text-align: center;
     margin-bottom: 1rem;
 }
+.question{
+    margin: 1rem 3rem;
+    font-family: 'roboto', sans-serif;
+    position: relative;
+}
+.angles{
+    right: 10%;
+    position: absolute;
+    color: red;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid #fff;
+    padding: 3px 5px;
+    border-radius: 5px;
+    bottom: 10%;
+    transition-property: transform;
+}
+.q3 h4, .q4 h4{
+    margin: 10px;
+}
+.openangles{
+    transform: rotateX(180deg);
+    color: #fff;
+}
+.open-q1{
+    height: 55px;
+    position: absolute;
+    animation: q1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes q1{
+    from{
+        height: 55px;
+    }
+    to{
+        height: 300px;
+    }
+}
+
+.open-q2{
+    height: 55px;
+    position: absolute;
+    animation: q2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes q2{
+    from{
+        height: 55px;
+    }
+    to{
+        height: 240px;
+    }
+}
+
+.open-q3{
+    height: 55px;
+    position: absolute;
+    animation: q3;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes q3{
+    from{
+        height: 55px;
+    }
+    to{
+        height: 450px;
+    }
+}
+
+.open-q4{
+    height: 300px;
+    position: absolute;
+    animation: q4;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes q4{
+    from{
+        height: 55px;
+    }
+    to{
+        height: 350px;
+    }
+}
+
+.open-q5{
+    height: 300px;
+    position: absolute;
+    animation: q5;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes q5{
+    from{
+        height: 55px;
+    }
+    to{
+        height: 100px;
+    }
+}
+.q1,.q2,.q3,.q4,.q5{
+    position: relative;
+    overflow: hidden;
+    height: 55px;
+}
+
+.q1 h3, .q2 h3, .q3 h3, .q4 h3, .q5 h3{
+    margin: 1rem 0;
+    position: relative;
+}
 /* desktop device */
 @media screen and (min-width: 900px) {
     .toggle-one, .toggle-two{
@@ -683,6 +796,9 @@ h2{
     }
     .other-banner-content h3{
         font-size: 17px;
+    }
+    .angles{
+        right: -5%;
     }
     
 }
