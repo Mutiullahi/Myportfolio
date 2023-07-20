@@ -461,10 +461,29 @@ h2{
     text-align: center;
     margin-bottom: 1rem;
 }
+.top{  
+    position: relative;
+}
+.top p{
+    background-color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    right: 1.5rem;
+    bottom: 7rem;
+}
 .question{
-    margin: 1rem 3rem;
+    margin: 1rem 0rem 1rem 3rem;
     font-family: 'roboto', sans-serif;
     position: relative;
+}
+.question p{
+    width: 80%;
 }
 .angles{
     right: 10%;
@@ -475,7 +494,7 @@ h2{
     border: 2px solid #fff;
     padding: 3px 5px;
     border-radius: 5px;
-    bottom: 10%;
+    bottom: 1%;
     transition-property: transform;
 }
 .q3 h4, .q4 h4{
@@ -483,6 +502,7 @@ h2{
 }
 .openangles{
     transform: rotateX(180deg);
+    transition: 0.5s;
     color: #fff;
 }
 .open-q1{
@@ -513,7 +533,7 @@ h2{
         height: 55px;
     }
     to{
-        height: 240px;
+        height: 250px;
     }
 }
 
@@ -545,7 +565,7 @@ h2{
         height: 55px;
     }
     to{
-        height: 350px;
+        height: 1050px;
     }
 }
 
@@ -573,6 +593,7 @@ h2{
 .q1 h3, .q2 h3, .q3 h3, .q4 h3, .q5 h3{
     margin: 1rem 0;
     position: relative;
+    width: 87%;
 }
 /* desktop device */
 @media screen and (min-width: 900px) {
@@ -797,8 +818,12 @@ h2{
     .other-banner-content h3{
         font-size: 17px;
     }
+    .question{
+        margin: 1rem;
+        font-size: 15px;
+    }
     .angles{
-        right: -5%;
+        right: 3%;
     }
     
 }
