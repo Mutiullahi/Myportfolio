@@ -222,6 +222,9 @@ body{
     position: relative;
     bottom: 0;
 }
+.paragraph p{
+    font-size: 20px;
+}
 @keyframes paragraph{
     from{
         bottom: -500px;
@@ -495,7 +498,7 @@ h2{
 }
 .top p{
     background-color: #ffff;
-    border-radius: 50%;
+    border-radius: 5px;
     display: flex;
     position: absolute;
     justify-content: center;
@@ -562,7 +565,7 @@ h2{
         height: 55px;
     }
     to{
-        height: 250px;
+        height: 270px;
     }
 }
 
@@ -624,9 +627,21 @@ h2{
     position: relative;
     width: 87%;
 }
+.about-read-me{
+    margin: 1rem;
+    background-color: #313131;
+    padding: 10px;
+    border-radius: 5px;
+}
+.about-read-me h3{
+    text-align: center;
+}
+.mission{
+    margin: 1rem;
+}
 /* desktop device */
 @media screen and (min-width: 900px) {
-    .toggle-one, .toggle-two{
+    .toggle-one, .togle{
         display: none;
     }
 }
