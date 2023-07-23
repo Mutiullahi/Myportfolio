@@ -4,6 +4,9 @@
     box-sizing: border-box;
     
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: #080808;
     color: #ffff;
@@ -27,7 +30,7 @@ body{
     height: 50rem;
 }
 .header-three{
-    background: linear-gradient(to top, rgba(224, 6, 6, 0.637), rgba(128, 0, 128, 0.707)), url("./images/laptop1.jpg");
+    background: linear-gradient(to top, rgba(224, 6, 6, 0.637), rgba(128, 0, 128, 0.707)), url("./images/social\ media.webp");
     background-size: cover;
     width: 100%;
     height: 50rem;
@@ -40,6 +43,12 @@ body{
 }
 .header-five{
     background: linear-gradient(to top, rgba(224, 6, 6, 0.637), rgba(128, 0, 128, 0.707)), url("./images/img-me.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 50rem;
+}
+.header-six{
+    background: linear-gradient(to top, rgba(224, 6, 6, 0.637), rgba(128, 0, 128, 0.707)), url("./images/administration.jpg");
     background-size: cover;
     width: 100%;
     height: 50rem;
@@ -228,13 +237,14 @@ body{
 }
 .notice{
     margin: 2rem;
-    background-color: rgba(255, 0, 68, 0.864);
+    background-color: rgba(255, 0, 0, 0.659);
     padding: 1rem;
     border-radius: 7px;
     text-align: center;
 }
 .notice h3{
-    font-size: 20px;
+    color: rgb(0, 255, 225);
+    font-size: 25px;
     margin-bottom: 1rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -275,11 +285,11 @@ body{
 }
 /* services */
 #service, #port, #about, #overview{
-    margin: 2rem;
+    margin: 1.5rem;
 }
 .services{
     display: grid;
-    grid-template-columns: repeat(3, 32%);
+    grid-template-columns: repeat(auto-fit , minmax(230px, 1fr));
     grid-gap: 1rem;
 }
 .app-one{
@@ -300,6 +310,11 @@ body{
     margin-top: 15px;
     margin-bottom: 15px;
 }
+.app-one ul li{
+    list-style: none;
+    margin-top: 6px;
+    font-size: 12px;
+}
 .app-one a{
     text-decoration: none;
     font-size: 15px;
@@ -310,6 +325,8 @@ body{
     animation-name: appone;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+    transition-property: background ;
+    transition: 1s;
 }
 @keyframes appone{
     from{
@@ -359,7 +376,7 @@ h2{
 }
 .about-me-split{
     display: grid;
-    grid-template-columns: repeat(2,40%);
+    grid-template-columns: repeat(auto-fit , minmax(300px, 1fr));
     gap: 1rem;
     width: 100%;
 }
@@ -367,12 +384,24 @@ h2{
 
 .myworks{
     display: grid;
-    grid-template-columns: repeat(3,32%);
+    grid-template-columns: repeat(auto-fit , minmax(250px, 1fr));
     gap: 1rem;
     align-items: center;
 }
 .works-list{
-    background: url("./images/img.jpg") no-repeat;
+    background: url("./images/daniel-korpai-iopITwyUcTA-unsplash.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+}
+.works-list-two{
+    background: url("./images/designer.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+}
+.works-list-three{
+    background: url("./images/keys.jpg") no-repeat;
     background-size: cover;
     border-radius: 10px;
     position: relative;
@@ -399,7 +428,7 @@ h2{
     color: #ffff;
     text-decoration: none;
 }
-.works-list:hover .inks{
+.works-list:hover .inks,.works-list-two:hover .inks,.works-list-three:hover .inks{
     animation: animate;
     animation-duration: 0.8s;
     position: relative;
@@ -472,8 +501,8 @@ h2{
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
     right: 1.5rem;
     bottom: 7rem;
 }
@@ -603,7 +632,7 @@ h2{
 }
 /* tablets device */
 @media screen and (min-width: 567px) and (max-width: 899px) {
-    .header-one,.header-two,.header-three, .header-four,.header-five{
+    .header-one,.header-two,.header-three, .header-four,.header-five,.header-six{
         height: 45rem;
     }
     .nav-link{
@@ -640,6 +669,7 @@ h2{
             left: 0px;
         }
     }
+
     .toggle-two{
         position: absolute;
         right: 1rem;
@@ -669,32 +699,10 @@ h2{
         top: 15rem;
         right: 1rem;
     }
-    .services{
-        display: grid;
-        grid-template-columns: repeat(2,50%);
-        grid-gap: 1rem;
-    }
-    #service, #port, #about, #overview{
-        margin: 1rem 3rem 2rem 3rem;
-    }
-    .app-one p{
-        font-size: 20px;
-    }
-    .myworks{
-        display: grid;
-        grid-template-columns: repeat(2,50%);
-        gap: 1rem;
-    }
-    .about-me-split{
-        display: grid;
-        grid-template-columns: repeat(1,90%);
-        gap: 1rem;
-        width: 100%;
-    }
 }
 /* for android */
 @media screen and (min-width: 0px) and (max-width: 566px) {
-    .header-one, .header-two, .header-three, .header-four,.header-five{
+    .header-one, .header-two, .header-three, .header-four,.header-five,.header-six{
         height: 45rem;
     }
     .nav-link{
@@ -775,37 +783,8 @@ h2{
         width: 100px;
         border-radius: 50%;
     }
-    .services{
-        display: grid;
-        grid-template-columns: repeat(1, 95%);
-        grid-gap: 1rem;
-    }
-    #service, #port, #about, #overview{
-        margin: 2rem 1rem 3rem 2rem;
-    }
-    .app-one p{
-        font-size: 25px;
-    }
-    .myworks{
-        display: grid;
-        grid-template-columns: repeat(1,95%);
-        gap: 1rem;
-    }
-    .image-me{
-        height: 20rem;
-        width: 100%;
-        box-shadow: 0px 0px 9px 5px red;
-        margin: 1rem;
-        
-    }
     .more{
         display: none;
-    }
-    .about-me-split{
-        display: grid;
-        grid-template-columns: repeat(1,90%);
-        gap: 1rem;
-        width: 100%;
     }
     @keyframes welcome{
         0%{
