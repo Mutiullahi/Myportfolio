@@ -1,4 +1,3 @@
-let btn = document.querySelector(".toggle");
 let toogle = document.querySelector(".nav-link")
 // angles functioning
 let angle_one = document.getElementById("angle-one")
@@ -6,12 +5,14 @@ let angle_two = document.getElementById("angle-two")
 let angle_three = document.getElementById("angle-three")
 let angle_four = document.getElementById("angle-four")
 let angle_five = document.getElementById("angle-five")
-// questios functionig
+// questions function
 let question_one = document.querySelector(".q1")
 let question_two = document.querySelector(".q2")
 let question_three = document.querySelector(".q3")
 let question_four = document.querySelector(".q4")
 let question_five = document.querySelector(".q5")
+// register click
+let clicks = document.querySelector(".acc")
 
 function opennav(){
     toogle.classList.add("open")
@@ -44,4 +45,8 @@ function angleopen4(){
 function angleopen5(){
     angle_five.classList.toggle("openangles")
     question_five.classList.toggle("open-q5")
+}
+
+function register(){
+    clicks.classList.toggle("open-register")
 }
