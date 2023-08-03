@@ -13,6 +13,8 @@ let question_four = document.querySelector(".q4")
 let question_five = document.querySelector(".q5")
 // register click
 let clicks = document.querySelector(".acc")
+// message popup
+let popup = document.querySelector(".popup")
 
 function opennav(){
     toogle.classList.add("open")
@@ -49,4 +51,13 @@ function angleopen5(){
 
 function register(){
     clicks.classList.toggle("open-register")
+}
+
+// popup message
+function openpopup(){
+    popup.classList.add("openpopup")
+}
+
+function closepopup(){
+    popup.classList.remove("openpopup")
 }

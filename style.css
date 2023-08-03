@@ -53,6 +53,23 @@ body{
     width: 100%;
     height: 50rem;
 }
+
+/* for blogs */
+.blogs-header-image{
+    background: #313131;
+    background-size: cover;
+    width: 100%;
+    height: 5rem;
+}
+.blogs-content{
+    background-color: #3b3b3f;
+    margin: 10px;
+}
+.blogs-content-other{
+    text-align: center;
+    margin: 2rem;
+    padding: 1rem 0;
+}
 .nav{
     display: flex;
     justify-content: space-between;
@@ -206,7 +223,7 @@ body{
         top: -1000px;
     }
     to{
-        top: -50px;
+        top: 0px;
     }
 }
 .other-banner-content h3{
@@ -230,7 +247,7 @@ body{
         bottom: -500px;
     }
     to{
-        bottom: 20px;
+        bottom: 40px;
     }
 }
 .more{
@@ -240,7 +257,7 @@ body{
 }
 .notice{
     margin: 2rem;
-    background-color: rgba(255, 0, 0, 0.659);
+    background-color: #c34444;
     padding: 1rem;
     border-radius: 7px;
     text-align: center;
@@ -292,7 +309,7 @@ body{
 }
 .services{
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit , minmax(250px, 1fr));
     grid-gap: 1rem;
 }
 .app-one{
@@ -363,7 +380,7 @@ h2{
 }
 .copyright{
     text-align: center;
-    font-size: 18px; 
+    font-size: 16px; 
 }
 .copyright p{
     padding: 10px 0px 5px 0px;
@@ -386,6 +403,7 @@ h2{
 /* my workd */
 
 .myworks{
+    margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit , minmax(250px, 1fr));
     gap: 1rem;
@@ -396,27 +414,32 @@ h2{
     background-size: cover;
     border-radius: 10px;
     position: relative;
+    height: 20rem;
 }
 .works-list-two{
     background: url("./images/designer.jpg") no-repeat;
     background-size: cover;
     border-radius: 10px;
     position: relative;
+    height: 20rem;
 }
 .works-list-three{
     background: url("./images/keys.jpg") no-repeat;
     background-size: cover;
     border-radius: 10px;
+    height: 20rem;
     position: relative;
 }
 .inks{
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.734), rgba(255, 0, 0, 0.882));
-    height: 20rem;
+    background: linear-gradient(to top, rgba(224, 6, 6, 0.637), rgba(128, 0, 128, 0.707));
+    height: 0;
     text-align: center;
     color: #ffff;
     padding: 0px 9px 0px 9px;
     border-radius: 10px;
-    opacity: 0;
+    position: absolute;
+    overflow: hidden;
+    transition: 1s;
 }
 .links{
     text-align: center;
@@ -432,20 +455,7 @@ h2{
     text-decoration: none;
 }
 .works-list:hover .inks,.works-list-two:hover .inks,.works-list-three:hover .inks{
-    animation: animate;
-    animation-duration: 0.8s;
-    position: relative;
-    animation-fill-mode: forwards;
-}
-@keyframes animate{
-    0%{
-        bottom: -20rem;
-        opacity: -2;
-    }
-    100%{
-        bottom: 0rem;
-        opacity: 1;
-    }
+    height: 100%;
 }
 .inks h3{
     padding: 5rem 0 2rem 0;
@@ -719,6 +729,10 @@ h2{
  .date{
     margin: 1rem 0;
  }
+ .list-money li{
+    font-weight: 500;
+    font-size: 20px;
+ }
  .lat-blog-one{
     background-color: #080808;
     box-shadow: 1px 1px 8px 1px  #fff;
@@ -728,6 +742,71 @@ h2{
  .lat-blog-one img{
     width: 100%;
     height: 250px;
+ }
+ .name{
+    display: flex;
+    width: 50%;
+ }
+ .popup{
+    text-align: center;
+    background-color: #c34444;
+    padding: 1rem;
+    position: absolute;
+    top: 10%;
+    width: 90%;
+    border-radius: 5px;
+    margin: 0 5%;
+    display: none;
+ }
+ .openpopup{
+    display: block;
+ }
+ .popup h3{
+    margin-bottom: 1rem;
+ }
+ .popup button{
+    padding: 10px 40px;
+    margin: 10px;
+    border: none;
+    background-color: #313131;
+    color: #fff;
+ }
+
+ .table{
+    border: 2px solid orange;
+    color: #c34444;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+ }
+ .table th{
+    border: 2px solid orange;
+    padding: 10px;
+    margin: 5px;
+ }
+ .table td{
+    padding: 1rem;
+    display: grid;
+ }
+ .table td p{
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 800;
+ }
+ .school{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.572), rgba(255, 0, 0, 0.383)), url("./images/school.jpg");
+    background-size: 100%;
+    height: 10rem;
+    color: #ff0000;
+    font-weight: 900;
+    background-repeat: no-repeat;
+ }
+ .school h3, .school h4{
+    top: 4rem;
+    margin-left: 3rem;
+    position: relative;
+    margin-top: 1rem;
+    font-size: 25px;
  }
 /* desktop device */
 @media screen and (min-width: 900px) {
