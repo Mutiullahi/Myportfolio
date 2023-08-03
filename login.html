@@ -11,8 +11,9 @@
 </head>
 <body>
     <div class="popup">
+        <img src="./images/warning.png" alt="" width="50px">
         <h3> CAUTION</h3>
-        <P> We are sorry, this page is still under development laughing soon</P>
+        <P> We are sorry, this page is still under development launching soon</P>
         <button onclick="closepopup()"> Ok</button>
     </div>
     <div id="header" class="blogs-header-image">
@@ -57,7 +58,7 @@
         <input type="password" name="Subject" id="subject" placeholder="Enter a password" required  autocomplete="off">
 
 
-        <button id="btn" onclick="openpopup()">Login</button>
+        <button id="btn">Login</button>
         
     </div>
     <!-- footer -->
@@ -106,6 +107,11 @@
     </div>
 </footer>
 </body>
+<script>
+    window.onload = () => {
+        popup.classList.add("openpopup")
+    }
+</script>
 <script src="./script.js"></script>
 <script src="https://kit.fontawesome.com/1cecaba7bb.js" crossorigin="anonymous"></script>
 </html>
