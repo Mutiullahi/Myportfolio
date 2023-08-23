@@ -53,6 +53,12 @@ body{
     width: 100%;
     height: 50rem;
 }
+.header-seven{
+    background: linear-gradient(to top, rgba(224, 6, 6, 0.637), rgba(128, 0, 128, 0.707)), url("./images/Project.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 50rem;
+}
 
 /* for blogs */
 .blogs-header-image{
@@ -69,6 +75,9 @@ body{
     text-align: center;
     margin: 2rem;
     padding: 1rem 0;
+}
+.blogs-content-other h1{
+    font-size: 18px;
 }
 .nav{
     display: flex;
@@ -223,7 +232,7 @@ body{
         top: -1000px;
     }
     to{
-        top: 0px;
+        top: -10px;
     }
 }
 .other-banner-content h3{
@@ -281,8 +290,9 @@ body{
 }
 .comment form{
     display: grid;
-    margin: 1rem;
+    margin: 10px;
     font-size: 18px;
+    
 }
 .comment form input,textarea{
     padding: 7px;
@@ -292,12 +302,14 @@ body{
     outline: none;
     padding: 10px;
     margin:  10px 0 10px 0;
-    font-size: 20px;
+    font-size: 15px;
     color: #ffff;
+    width: 100%;
 }
 .comment form button{
     background-color: blue;
-    padding: 8px;
+    padding: 10px;
+    font-weight: 700;
     border: none;
     color: #ffff;
     border-radius: 4px;
@@ -463,7 +475,7 @@ h2{
 .link{
     background-color: #ffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
     padding: 10px;
     font-size: 20px;
     margin-top: 20px;
@@ -479,6 +491,9 @@ h2{
 .connect ul li a{
     color: red;
     font-size: 25px;
+}
+.connect ul li a:hover{
+    color: blue;
 }
 .cts{
     margin: 1rem;
