@@ -13,7 +13,7 @@ body{
     font-family: 'roboto slab', sans-serif;
 }
 .logo{
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 900;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -82,7 +82,7 @@ body{
 .nav{
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 5%;
+    padding: 1rem 3rem;
     align-items: center;
 }
 .nav-link{
@@ -103,16 +103,16 @@ body{
     background-color: blue;
 }
 .toggle-one{
-    font-size: 25px;
+    font-size: 23px;
     background-color: blue;
-    padding:  5px 9px;
+    padding:  1px 7px;
     cursor: pointer;
     border-radius: 5px;
 }
 .toggle-two{
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 1px;
 }
 .togle{
     background-color: red;
@@ -676,12 +676,14 @@ h2{
     align-items: center;
     position: absolute;
     display: none;
+    width: 10rem;
 }
 .open-register{
     display: block;
 }
 .acc li{
-    margin: 1rem;
+    margin:  1rem 0;
+    font-size: 15px;
 }
  /* blog */
  .blogger-list{
@@ -821,6 +823,35 @@ h2{
     margin-left: 2rem;
     font-size: 20px;
  }
+ .project{
+    margin: 1rem 1.5rem;
+ }
+ .projectlist{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+ }
+ .project-list{
+    border: 1px solid #fff;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+ }
+ .project-list h5{
+    margin: 4px;
+ }
+ .project-list p{
+    background-color: purple;
+    border-radius: 5px;
+    padding: 5px 10px;
+ }
+ .project-list p a{
+    color: #ffff;
+    text-decoration: none;
+ }
+ .p-link{
+    display: flex;
+    justify-content: space-between;
+ }
 /* desktop device */
 @media screen and (min-width: 900px) {
     .toggle-one, .togle{
@@ -911,6 +942,9 @@ h2{
         position: relative;
         left: 23%;
         margin: 1rem 0 1rem 0;
+     }
+     .logo{
+        color: lightblue;
      }
 }
 /* for android */
@@ -1033,4 +1067,8 @@ h2{
         top: 51px;
         left: 0px;
     }
+    .logo{
+        color: lightblue;
+        font-size: 20px;
+     }
 }

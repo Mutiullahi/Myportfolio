@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="mainmenu">
+        <div class="container">
+            <div class="screen"></div>
+            <button>MR+</button>
+            <button>MR-</button>
+            <button>DEL</button>
+            <button>AC/ON</button>
+
+            <button class="Numeric-key" id="7">7</button>
+            <button class="Numeric-key" id="8">8</button>
+            <button class="Numeric-key" id="9">9</button>
+            <button class="operation-key" id="X">X</button>
+
+            <button class="Numeric-key" id="4">4</button>
+            <button class="Numeric-key" id="5">5</button>
+            <button class="Numeric-key" id="6">6</button>
+            <button class="operation-key" id="-">-</button>
+            
+            <button class="Numeric-key" id="1">1</button>
+            <button class="Numeric-key" id="2">2</button>
+            <button class="Numeric-key" id="3">3</button>
+            <button class="btn" class="operation-key" id="+">+</button>
+
+            <button class="Numeric-key" id="0">0</button>
+            <button class="Numeric-key" id=".">.</button>
+            <button class="operation-key" id="&divide;">&divide;</button>
+            <button class="span2" id="=">=</button>
+        </div>
+    </div>
+</body>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .mainmenu{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,80px);
+        border: 2px solid black;
+    }
+    .container button{
+        font-weight: 700;
+        margin: 4px;
+        padding: 10px 0;
+        background-color: cornflowerblue;
+        border: 1px solid #080008;
+    }
+    .screen{
+        background-color: blueviolet;
+        margin: 5px;
+        padding: 1rem 0;
+        grid-column: span 4;
+    }
+    .span2{
+        grid-column: span 4;
+    }
+    .btn{
+        grid-row: span 2;
+    }
+    button:active{
+        background-color: brown;
+        color: aliceblue;
+        border: none;
+    }
+</style>
+<script>
+    const display = document.querySelector(".screen")
+    const Numeric_key = document.querySelectorAll(".Numeric-key").values;
+    const operation_key = document.querySelectorAll(".operation-key").values;
+    
+</script>
+</html>
