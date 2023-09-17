@@ -1,57 +1,356 @@
 *{
-    padding: 0;
     margin: 0;
-
+    padding: 0;
 }
-.heading-one{
-    background: linear-gradient(to bottom, #ffffff00,#0808087a), url("./images/school\ background.jpg");
+html{
+    scroll-behavior: smooth;
+}
+.container{
     height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.801), rgba(0, 0, 0, 0.822)), url("./images/school\ background.jpg");
     background-size: cover;
+    padding-top: 1.5rem;
 }
-header{
+.header{
     display: flex;
     justify-content: space-around;
-    padding: 20px 0;
-}
-.logo{
-    color: #ffffff;
-    font-size: 18px;
-}
-.logo i{
-    font-size: 30px;
-    color: red;
+    align-items: center;
 }
 .navbar{
     display: flex;
 }
 .navbar li{
+    margin: 0 15px;
     list-style: none;
-    margin: 0 10px;
+}
+.navbar li::after {
+    content: "";
+    position: absolute;
 }
 .navbar li a{
     text-decoration: none;
     color: #ffffff;
-    line-height: 3px;
-    width: 100%;
+}
+.logo{
+    color: yellow;
+    font-size: 20px;
+    font-weight: 700;
+}
+.welcome-banner{
+    height: 100vh;
+    display: grid;
+    place-items: center;
 }
 .banner{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 60%;
     text-align: center;
     color: #ffffff;
 }
-.welcome{
-    width: 50%;
+.banner h2{
+    font-size: 40px;
+    margin: 0;
 }
-.welcome p{
-    margin: 10px;
+.banner p{
+    margin: 10px 0 30px;
 }
-.welcome a{
-    border: 1px solid #ffffff;
-    padding: 8px;
+.banner a{
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+}
+.banner p a{
     text-decoration: none;
     color: #ffffff;
+    font-weight: 600;
+}
+.courses{
+    margin: 3rem 2rem;
+    text-align: center;
+}
+.courses-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+.list{
+    background-color: rgba(241, 138, 64, 0.925);
+    padding: 10px 6px;
+    border-radius: 5px;
+}
+.courses p, .campus p{
+    margin: 5px 0 20px;
+}
+.campus{
+    margin: 3rem 2rem;
+}
+.campus p{
+    text-align: center;
+}
+.campus h2{
+    margin: 1rem 0;
+    text-align: center;
+}
+.toggle{
+    font-size: 50px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.campus-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    position: relative;
+}
+
+.list-one{
+    background-image: url("./images/school\ background.jpg");
+    border-radius: 5px;
+    background-size: cover;
+    position: relative;
+    height: 18rem;
+    width: 100%;
+}
+.ink{
+    height: 0;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background-color: rgba(255, 0, 0, 0.603);
+    border-radius: 5px;
+    position: absolute;
+    overflow: hidden;
+    transition: 1s;
+}
+.list-one:hover .ink{
+    height: 100%;
+}
+.facilities{
+    text-align: center;
+    margin: 3rem 2rem;
+}
+.facilities h2{
+    margin: 5px;
+}
+.facilities p{
+    margin: 5px 0 15px;
+}
+.fac-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+.fac-list img{
+    border-radius: 5px;
+}
+.student{
+    margin: 3rem 2rem;
+    text-align: center;
+}
+.stu{
+    background-color: darkorange;
+    padding: 17px;
+    border-radius: 7px;
+    display: flex;
+    margin: 1rem 0 0;
+}
+.stu-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    text-align: justify;
+}
+.stu img{
+    border-radius: 50%;
+    height: 70px;
+    margin-right: 1rem;
+}
+.enroll{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.808),rgba(0, 0, 0, 0.808)), url("./images/school\ background.jpg");
+    background-size: cover;
+    width: 90%;
+    height: 20rem;
+    margin: 0 5%;
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+}
+.contact{
+    text-align: center;
+    width: 50%;
+}
+.contact h3{
+    font-size: 30px;
+}
+.contact p{
+    margin: 40px;
+}
+.contact p a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+}
+.about{
+    margin: 3rem 2rem;
+    text-align: center;
+}
+footer{
+    background-color: blueviolet;
+    padding: 1rem;
+    text-align: center;
+}
+.footer-one ul{
+    list-style: none;
+    text-align: justify;
+}
+.footer-one ul li{
+    margin: 7px 0;
+}
+.footer-one ul li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.footer-links{
+    display: flex;
+    justify-content: space-around;
+}
+.more{
+    margin: 3rem 2rem;
+    text-align: center;
+}
+.more-list{
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    gap: 3rem;
+}
+.m-l{
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 20px;
+}
+.m-l img{
+    height: 400px;
+    width: 100%;
+}
+.EXPLORE{
+    margin: 30px 10px;
+}
+.EXPLORE a{
+    border: 1px solid red;
+    color: red;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.cts-form{
+    margin: 3rem 2rem;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    width: 40%;
+}
+.cts-form form{
+    display: grid;
+    gap: 1rem;
+}
+.cts-form form input{
+    padding: 10px;
+}
+.cts-form form button{
+    border: 2px solid red;
+    padding: 10px;
+    background: none;
+    color: red;
+    font-weight: 900;
+    width: 150px;
+}
+/* laptop/Desktop */
+@media screen and (min-width: 1000px) {
+    .toggle{
+        display: none;
+    }
+    .navbar p{
+        display: none;
+    }
+}
+/* tablets devices */
+@media screen and (min-width: 568px) and (max-width: 999px) {
+    .navbar{
+        display: none;
+    }
+    .banner h2{
+        font-size: 30px;
+        margin: 0;
+    }
+    .banner{
+        width: 70%;
+        text-align: center;
+        color: #ffffff;
+    }
+    .open{
+        display: block;
+    }
+    .navbar p{
+        font-size: 30px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    .contact{
+        text-align: center;
+        width: 70%;
+    }
+    .more-list{
+        display: grid;
+        grid-template-columns: repeat(1, 97%);
+    }
+    .cts-form{
+        width: 65%;
+    }
+    
+}
+
+/* smaller decvices */
+@media screen and (min-width: 0px) and (max-width: 567px) {
+    .navbar{
+        display: none;
+    }
+    .navbar li{
+        letter-spacing: 8px;
+        margin: 2rem 0;
+    }
+    .banner h2{
+        font-size: 25px;
+        margin: 0;
+    }
+    .banner{
+        width: 80%;
+        text-align: center;
+        color: #ffffff;
+    }
+    .open{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: blueviolet;
+        padding: 1rem;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+    }
+    .navbar p{
+        font-size: 30px;
+        font-weight: 500;
+        text-align: right;
+        cursor: pointer;
+    }
+    .contact{
+        text-align: center;
+        width: 80%;
+    }
+    .more-list{
+        display: grid;
+        grid-template-columns: repeat(1, 97%);
+    }
+    .cts-form{
+        width: 80%;
+    }
 }
