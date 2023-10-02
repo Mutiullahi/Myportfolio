@@ -11,15 +11,26 @@
         <div class="container">
             <div class="header">
                 <div class="logo">YOURLOGO</div>
-                <div class="toggle" onclick="opentoggle()">&#8801</div>
+                <div class="toggle" onclick="opentoggle()"><i class="fa-solid fa-bars"></i></div>
                 <ul class="navbar">
-                    <p onclick="closetoggle()">X</p>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./about.html">ABOUT</a></li>
-                    <li><a href="services.html">SERVICES</a></li>
-                    <li><a href="#">ACADEMICS</a></li>
-                    <li><a href="./course.html">COURSES</a></li>
-                    <li><a href="#">BLOGS</a></li>
+                    <p onclick="closetoggle()"><i class="fa-solid fa-circle-xmark"></i></p>
+                    <li><a href="./index.html"> <i class="fa-solid fa-house"></i> HOME</a></li>
+                    <li><a href="./about.html"> <i class="fa-solid fa-globe"></i> ABOUT</a></li>
+                    <li><a href="services.html"> <i class="fa-brands fa-servicestack"></i> SERVICES</a></li>
+                    <li class="aca"> <i class="fa-solid fa-user"></i> ACADEMICS  <i class="fa-solid fa-angle-down"></i>
+                        <ul>
+                            <li><a href=""> <i class="fa-solid fa-calendar-days"></i> ACADEMICS CALENDERS</a></li>
+                            <li><a href="#"> <i class="fa-solid fa-laptop"></i> ONLINE PROGAMS</a></li>
+                            <li><a href="#">APPLICATION MODE</a></li>
+                            <li><a href="./course.html">COURSES</a></li>
+                        </ul>
+                    </li>
+                    <li class="blo"> <i class="fa-solid fa-blog"></i> BLOG <i class="fa-solid fa-angle-down"></i>
+                        <ul>
+                            <li><a href="#">NOTICE BOARD</a></li>
+
+                        </ul>
+                    </li>
                 </ul>
             </div>
 
@@ -187,4 +198,5 @@
     </div>
 </body>
 <script src="./index.js"></script>
+<script src="https://kit.fontawesome.com/1cecaba7bb.js" crossorigin="anonymous"></script>
 </html>

@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    background-color: blue;
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+}
+.navbar header{
+    background-color: #ffff;
+    margin: 5px;
+    padding: 10px 0;
+    font-size: 20px;
+    border-radius: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar ul li{
+    margin: 30px 5px ;
+    padding: 15px 0;
+    border-radius: 5px;
+    color: #fff;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 18px;
+}
+.navbar ul li:hover{
+    background-color: #ffff;
+}
