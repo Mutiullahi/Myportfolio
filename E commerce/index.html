@@ -10,12 +10,14 @@
     <div class="mainmenu">
         <div class="navbar">
             <header>My App</header>
+            <p onclick="closetoogle()" class="closetoogle">X</p>
             <div class="app-list">
                 <ul>
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">PROFILE</a></li>
                     <li><a href="#">TRACK ORDER</a></li>
                     <li><a href="#">CHART</a></li>
+                    <li><a href="#">CATEGORIES</a></li>
                     <li><a href="#">CHATS</a></li>
                     <li><a href="#">SETTINGS</a></li>
                     <li><a href="#">LOGIN</a></li>
@@ -25,6 +27,7 @@
 
         <div class="container" id="home">
             <header>
+                <div class="toogle" onclick="opentoogle()">&#8801</div>
                 <div class="head">
                     <h2>LOGO</h2>
 
@@ -35,7 +38,48 @@
                     
                 </div>
             </header>
+
+            <div class="stock-container">
+                <div class="stock-list">
+                    <img src="../images/administration.jpg" alt="" width="200px">
+                    <p>STOCK NAME</p>
+                    <p>$70</p>
+                    <div class="stock-link">
+                        <button>Add to Cart</button>
+                        <button> Buy</button>
+                    </div>
+                </div>
+
+                <div class="stock-list">
+                    <img src="../images/administration.jpg" alt="" width="200px">
+                    <p>STOCK NAME</p>
+                    <p>$70</p>
+                    <div class="stock-link">
+                        <button>Add to Cart</button>
+                        <button> Buy</button>
+                    </div>
+                </div>
+
+                <div class="stock-list">
+                    <img src="../images/administration.jpg" alt="" width="200px">
+                    <p>STOCK NAME</p>
+                    <p>$70</p>
+                    <div class="stock-link">
+                        <button>Add to Cart</button>
+                        <button> Buy</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
+<script>
+    const btn= document.querySelector(".navbar");
+    function opentoogle(){
+        btn.classList.add("open");
+    }
+    function closetoogle(){
+        btn.classList.remove("open");
+    }
+</script>
 </html>

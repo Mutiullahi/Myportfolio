@@ -3,30 +3,84 @@
     margin: 0;
 }
 .navbar{
-    background-color: blue;
-    width: 200px;
+    background-color: navy;
+    width: 250px;
     height: 100%;
     position: fixed;
     text-align: center;
+    overflow: auto;
+    display: none;
+}
+.navbar::-webkit-scrollbar{
+    
 }
 .navbar header{
-    background-color: #ffff;
-    margin: 5px;
-    padding: 10px 0;
+    background-color: blue;
+    padding: 25px 0;
     font-size: 20px;
-    border-radius: 7px;
+    border-radius: 1px;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    color: #ffff;
 }
 .navbar ul li{
     margin: 30px 5px ;
     padding: 15px 0;
     border-radius: 5px;
-    color: #fff;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff9d;
 }
 .navbar ul li a{
     text-decoration: none;
+    color: rgb(0, 255, 242);
+    
     font-size: 18px;
 }
 .navbar ul li:hover{
-    background-color: #ffff;
+    background-color: #ffffff56;
+}
+.stock-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.stock-list{
+    background-color: blueviolet;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+.stock-list p{
+    font-size: 18px;
+    color: #ffff;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 10px;
+}
+.stock-link{
+    display: flex;
+    justify-content: space-around;
+}
+.stock-link button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffff;
+    background-color: rgba(0, 255, 255, 0.452);
+    border: none;
+    font-weight: 700;
+    font-size: 17px;
+}
+.toogle{
+    font-size: 40px;
+}
+.closetoogle{
+    position: absolute;
+    font-size: 30px;
+    top: 1px;
+    right: 1px;
+}
+
+.open{
+    display: block;
 }
