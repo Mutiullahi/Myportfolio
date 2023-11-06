@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide/Show password</title>
+</head>
+<body>
+    <div class="container">
+        <form action="#" method="post">
+            <input type="password" placeholder="password" id="password" required>
+            <img src="./images/pngwing.com.png" alt="" id="eyeicon">
+        </form>
+    </div>
+</body>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background: navy;
+    }   
+    .container{
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+    .container form{
+        position: relative;
+    }
+    .container form input{
+        padding: 10px 50px 10px 10px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+    form img{
+        width: 30px;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        cursor: pointer;
+    }
+</style>
+<script>
+    // to select the password and the eyeicon
+    let password = document.getElementById("password");
+    let eyeicon =  document.getElementById("eyeicon");
+    // eyeicon functioning
+    eyeicon.onclick = function(){
+        // to change password to text
+        if(password.type == "password"){
+            password.type = "text";
+            // to swith eyeicon 
+            eyeicon.src = "./images/eye hide.png";
+        }else{
+            password.type = "password";
+            eyeicon.src = "./images/pngwing.com.png";
+        }
+    }
+</script>
+</html>

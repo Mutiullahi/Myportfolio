@@ -2,34 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Lilita+One&family=Poppins&family=Roboto+Slab&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title> How to  make money online</title>
 </head>
 <body>
-    <div class="popup">
-        <img src="./images/warning.png" alt="" width="50px">
-        <h3> CAUTION</h3>
-        <P> We are sorry, this page is still under development launching soon</P>
-        <button onclick="closepopup()"> Ok</button>
-    </div>
     <div id="header" class="blogs-header-image">
         <header class="nav">
+            <div class="back-button"> &LeftArrow;</div>
             <div class="logo">Code and Creative</div>
-            <div class="toggle-one" onclick="opennav()"><i class="fa-solid fa-bars"></i> </div>
+            <div></div>
+            <!-- <div class="toggle-one" onclick="opennav()"><i class="fa-solid fa-bars"></i> </div> -->
             
 
-            <ul class="nav-link">
+            <!-- <ul class="nav-link">
                 <div class="togle">
                     <div class="toggle-two" onclick="closenav()"> <i class="fa-solid fa-square-xmark"></i> </div>
                 </div>
                 <li><a href="./index.html"> <i class="fa-solid fa-house"></i> HOME</a></li>
                 <li><a href="./about.html"> <i class="fa-solid fa-chart-simple"></i> ABOUT</a></li>
                 <li><a href="./service.html"> <i class="fa-solid fa-globe"></i> SERVICES</a></li>
-                <li><a href="./store.html"> <i class="fa-solid fa-cart-shopping"></i> STORE</a></li>
+                <li><a href="./portfolio.html"> <i class="fa-solid fa-user"></i> PORTFOLIO</a></li>
                 <li><a href="./blog.html"> <i class="fa-solid fa-blog"></i> BLOG</a></li>
                 <li class="acc-select" onclick="register()"> <i class="fa-solid fa-user-secret"></i> ACCOUNT
                     <ul class="acc">
@@ -37,31 +33,32 @@
                         <li> <a href="./login.html"> <i class="fa-solid fa-right-to-bracket"></i> LOGIN</a></li>
                     </ul>
                 </li>
-            </ul>
+            </ul> -->
         </header>
         
     </div>
     <div class="blogs-content">
         <div class="p">
             <div class="blogs-content-other">
-                <h1>LOGIN</h1>
+                <h1> PASSWORD HIDE / SHOW</h1>
             </div>
         </div>
     </div>
-    <div class="comment">
-        <form action="#" method="POST" >
 
-        <label for="email">Email</label>
-        <input type="email" name="Emaill address" id="email" placeholder="Enter your Email" required  autocomplete="off">
-
-        <label for="password">Password</label>
-        <input type="password" name="Subject" id="subject" placeholder="Enter a password" required  autocomplete="off">
-
-
-        <button id="btn">Login</button>
-        
+    <div class="blog-list">
+        <div class="blog-1">
+            <img  class="blog-img" src="./images/advert_sm.jpg" alt="" width="90%">
+            <h3> HOW TO SHOW / HIDE PASSWORD USING HTML/CSS AND JAVASCRIPT</h3>
+            <h4> Table of Content</h4>
+            <ul>
+                <li> What is Hawkit, and how does it works ?</li>
+                <li> Is it save to use Hawkit, Is it a scam</li>
+                <li> How to Create an account on Hawkit</li>
+                
+            </ul>
+        </div>
     </div>
-    <!-- footer -->
+
     <footer>
         <div class="foot-all">
             <div class="quicklinks">
@@ -107,11 +104,18 @@
     </div>
 </footer>
 </body>
-<script>
-    window.onload = () => {
-        popup.classList.add("openpopup")
-    }
-</script>
-<script src="./script.js"></script>
+    <style>
+        .list-money{
+            margin: 1rem;
+        }
+        .making-money li{
+            font-size: 15px;
+            font-weight: 100;
+        }
+        .blog-list{
+            margin:  0 2rem;
+        }
+    </style>
+<script src="../script.js"></script>
 <script src="https://kit.fontawesome.com/1cecaba7bb.js" crossorigin="anonymous"></script>
 </html>

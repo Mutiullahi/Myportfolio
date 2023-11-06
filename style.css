@@ -59,6 +59,12 @@ body{
     width: 100%;
     height: 50rem;
 }
+.header-eight{
+    background: linear-gradient(to top, rgba(224, 6, 6, 0.637), rgba(128, 0, 128, 0.707)), url("./images/Store.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 50rem;
+}
 
 /* for blogs */
 .blogs-header-image{
@@ -82,7 +88,7 @@ body{
 .nav{
     display: flex;
     justify-content: space-between;
-    padding: 1rem 3rem;
+    padding: 1rem 1.5rem;
     align-items: center;
 }
 .nav-link{
@@ -442,6 +448,13 @@ h2{
     height: 20rem;
     position: relative;
 }
+.works-list-four{
+    background: url("./images/store.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    height: 20rem;
+    position: relative;
+}
 .inks{
     background: linear-gradient(to top, rgba(224, 6, 6, 0.637), rgba(128, 0, 128, 0.707));
     height: 0;
@@ -466,7 +479,7 @@ h2{
     color: #ffff;
     text-decoration: none;
 }
-.works-list:hover .inks,.works-list-two:hover .inks,.works-list-three:hover .inks{
+.works-list:hover .inks,.works-list-two:hover .inks,.works-list-three:hover .inks,.works-list-four:hover .inks{
     height: 100%;
 }
 .inks h3{
@@ -851,6 +864,78 @@ h2{
  .p-link{
     display: flex;
     justify-content: space-between;
+ }
+ .products{
+    margin: 10px;
+    padding: 10px;
+ }
+ .products form{
+    display: flex;
+ }
+ .products form input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px 0 0 5px;
+ }
+ .products form button{
+    padding: 10px 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: red;
+    border: none;
+ }
+ .products-list{
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+ }            
+ .product{
+    border: 1px solid white;
+    box-shadow: 1px 1px 10px 1px white;
+    text-align: center;
+ }
+ .product p{
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin: 15px 0;
+ }
+ .product p a{
+    font-weight: 100;
+ }
+ .product img{
+    width: 90%;
+ }
+ .products-link ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+ }
+ .products-link ul li{
+    background-color: #c34444;
+    padding: 13px;
+ }
+ .products-link ul li a{
+    text-decoration: none;
+    color: white;
+    
+ }
+ .product-seemore{
+    background: none;
+    border: 1px solid red;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+ }
+ .back-button{
+    font-size: 40px;
+    cursor: pointer;
  }
 /* desktop device */
 @media screen and (min-width: 900px) {

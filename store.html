@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Lilita+One&family=Poppins&family=Roboto+Slab&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Portfolio</title>
+</head>
+<body>
+    <div id="header" class="header-eight">
+        <header class="nav">
+            <div class="logo">Code and Creative</div>
+            <div class="toggle-one" onclick="opennav()"><i class="fa-solid fa-bars"></i> </div>
+            
+
+            <ul class="nav-link">
+                <div class="togle">
+                    <div class="toggle-two" onclick="closenav()"> <i class="fa-solid fa-square-xmark"></i> </div>
+                </div>
+                <li><a href="./index.html"> <i class="fa-solid fa-house"></i> HOME</a></li>
+                <li><a href="./about.html"> <i class="fa-solid fa-chart-simple"></i> ABOUT</a></li>
+                <li><a href="./service.html"> <i class="fa-solid fa-globe"></i> SERVICES</a></li>
+                <li><a href="./store.html"> <i class="fa-solid fa-cart-shopping"></i> STORE</a></li>
+                <li><a href="./blog.html"> <i class="fa-solid fa-blog"></i> BLOG</a></li>
+                <li class="acc-select" onclick="register()"> <i class="fa-solid fa-user-secret"></i> ACCOUNT
+                    <ul class="acc">
+                        <li><a href="./register.html"> <i class="fa-solid fa-plus"></i> REGISTER</a></li>
+                        <li> <a href="./login.html"> <i class="fa-solid fa-right-to-bracket"></i> LOGIN</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+        <div class="other-banner">
+            <div class="p">
+                <div class="other-banner-content">
+                    <h1> STORE</h1>
+                    <h3> WELCOME TO CODE AND CREATIVE WEBSITE</h3>
+                </div>
+                <div class="paragraph">
+                    <p>
+                        Code and Creative is a leading provider of solving companies problems, 
+                        Our missions is to satisfy our Customers at all fitness levels with an 
+                        enjoyable workout experience in a positive way
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="store">
+        <h2>ALL PRODUCTS LIST</h2>
+        <div class="products">
+            <form action="#" method="post">
+                <input type="text" placeholder="Search" required id="search-items" onkeyup="search()">
+                <button type="submit">Search</button>
+            </form>
+            <div class="products-list" id="products-link">
+                <div class="product">
+                    <img src="./images/Store.jpg" alt=""  >
+                    <p>Animation Login Form</p>
+                    <div class="products-link">
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="./Store/animation-login.html">View Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="./images/Store.jpg" alt=""  >
+                    <p>Strong Password</p>
+                    <div class="products-link">
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">View Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="./images/Store.jpg" alt="" >
+                    <p>Hide/Show Password</p>
+                    <div class="products-link">
+                        <ul>
+                            <li><a href="./hide-show.html" download="">Download</a></li>
+                            <li><a href="./hide-show.html">View Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="./images/Store.jpg" alt="" >
+                    <p>Password Validation Check</p>
+                    <div class="products-link">
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">View Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="./images/Store.jpg" alt="" >
+                    <p>Database Connection</p>
+                    <div class="products-link">
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">View Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="./images/Store.jpg" alt="" >
+                    <p>Information Store</p>
+                    <div class="products-link">
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">View Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="./images/Store.jpg" alt="" >
+                    <p>Fetch Information</p>
+                    
+                    <div class="products-link">
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">View Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="./images/Store.jpg" alt="" >
+                    <p>Form Design</p>
+                    <div class="products-link">
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">View Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="./images/Store.jpg" alt="" >
+                    <p>Introduction to Front-end</p>
+                    <div class="products-link">
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">View Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="./images/Store.jpg" alt="">
+                    <p>functioning Calculator</p>
+                    <div class="products-link">
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">View Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="./images/Store.jpg" alt="" >
+                    <p>Send Message to Email</p>
+                    <div class="products-link">
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">View Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="./images/Store.jpg" alt="">
+                    <p>Send Message to Email</p>
+                    <div class="products-link">
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">View Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="./images/Store.jpg" alt="">
+                    <p>Send Message to Email</p>
+                    <div class="products-link">
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">View Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <button class="product-seemore" id="product-seemore,">See More</button>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+            <div class="foot-all">
+                <div class="quicklinks">
+                    <h2>QUILK LINKS</h2>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./portfolio.html">Portfolio</a></li>
+                        <li><a href="./service.html">Services</a></li>
+                        <li><a href="./contact.html"> Contacts</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+    
+                <div class="contact">
+                    <h2>contact Us</h2>
+                    <p>You can reach Code and Creative on</p>
+                    <ul>
+                        <li>Gmail : Ahmadmutiullahi@gmail.com</li>
+                        <li> Phone Number : +234 - 816 - 170 - 3598 OR <br> 08161703598</li>
+                        <li> Location : ibadan, oyo state Nigeria</li>
+                    </ul>
+                        <div class="connect">
+                            <ul>
+                                <li><a href="https://www.facebook.com/profile.php?id=100075931402789"> <i class="fa-brands fa-facebook"></i> </a></li>
+                                <li><a href="https://instagram.com/code_and_creative"> <i class="fa-brands fa-instagram"></i> </a></li>
+                                <li><a href="https://wa.me/2348161703598"> <i class="fa-brands fa-whatsapp"></i> </a></li>
+                                <li><a href="https://github.com/mutiullahi"> <i class="fa-brands fa-github"></i> </a></li>
+                                <li><a href="mailto:ahmadmutiullahi@gmail.com"> <i class="fa-solid fa-envelope"></i> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="copyright">
+                <p>COPYRIGHT <span> &#169</span> 2023 , CODE AND CREATIVE</p>
+            </div>
+        </div>
+        <div class="top">
+            <p> <a href="#header"><i class="fa-solid fa-eject fa-bounce"></i></a></p>
+        </div>
+    </footer>
+</body>
+<script src="./script.js"></script>
+<script src="https://kit.fontawesome.com/1cecaba7bb.js" crossorigin="anonymous"></script>
+</html>

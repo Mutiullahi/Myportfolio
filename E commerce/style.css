@@ -84,3 +84,23 @@
 .open{
     display: block;
 }
+.search input{
+    padding: 8px 20px;
+    font-size: 18px;
+}
+.search button{
+    padding: 10px 15px;
+    color: #ffff;
+    background-color: purple;
+    border: none;
+    border-radius: 4px;
+}
+.head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#header{
+    display: flex;
+    justify-content: space-around;
+}
