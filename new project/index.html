@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2></h2>
+    <button onclick="clickme()">Click ME</button>
+</body>
+<script>
+    function clickme(){
+        fetch("https://ipapi.co/json/")
+    .then((Response) => Response.json()) .then((data) => {
+        const des = document.querySelector("h2");
+        
+                des.innerHTML = `Latitude: ${data.latitude} <br> Longtitude: ${data.longitude} <br> IP: ${data.ip}`;
+    });
+    }
+    //     if(navigator.geolocation){
+    //         navigator.geolocation.getCurrentPosition(Showposition, ShowError);
+    //     } else{
+    //         alert("Geolocation is not supported by this browser");
+    //     }
+    // };
+    // const Showposition = (position) => {
+    //     let lat = position.coords.latitude;
+    //             let long = position.coords.longitude;
+
+    //              const des = document.querySelector("h2");
+    //             des.innerHTML = `Latitude: ${lat} <br> Longtitude: ${long}`;
+    // }
+
+    // const ShowError = (error) => {
+    //     switch(error.code){
+    //         case error.PERMISSION_DENIED: alert("permistion denied")
+    //     }
+    // }
+
+</script>
+</html>

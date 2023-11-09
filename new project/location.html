@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Tracker</title>
+</head>
+<body>
+    <div class="mainmenu">
+        <div class="container">
+            <header>
+                <div class="Logo">Location Tracker</div>
+                <div class="toogle" onclick="opennav()"><i class="fa-solid fa-bars"></i></div>
+                <ul class="navbar">
+                    <div class="closenav" onclick="closenav()"><i class="fa-solid fa-circle-xmark"></i></div>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </header>
+        </div>
+        <div id="home">
+            <div class="img">
+                <h1>LOCATION TRACKERS</h1>
+            </div>
+            <ol>
+                <li><h1>Location Tracker</h1>
+                    <h2>Latitude: <span class="lat"> 0.00000000</span></h2>
+                    <h2>Longitude: <span class="long">0.00000000</span></h2>
+                    <button onclick="clickme()">Get Location</button>
+                </li>
+
+                <li>
+                    <h1>IP Address Tracker</h1>
+                    <h2>IP Address: <span class="ip-address">123.456.789.000</span></h2>
+                    <button onclick="ipaddress()">Get Ip Address</button>
+                </li>
+
+                <li>
+                    <h1>Network Organization Tracker</h1>
+                    <h2>Network Organization: <span class="network-pro">Abc.AS</span></h2>
+                    <h2>Network: <span class="network">123.456.789.00</span></h2>
+                    <h2>Region: <span class="region"> </span></h2>
+                    <h2>Utc Offset: <span class="utc-offset"> +0000</span></h2>
+                    <h2>Country Calling Code: <span class="call-code">+000</span></h2>
+                    <button onclick="net_pro()">Get Network Org</button>
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: black;
+        color: orange;
+
+    }
+    .img{
+        height: 100vh;
+        width: 100%;
+        background: url("./country.jpg");
+        background-size: cover;
+    }
+    .img h1{
+        display: grid;
+        place-items: center;
+        height: 100%;
+        color: white;
+    }
+    .container{
+        background-color: blue;
+        font-size: 18px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .container header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .container header ul{
+        list-style: none;
+        display: flex;
+    }
+    .container header ul li{
+        margin: 0 15px;
+    }
+    .container header ul li a{
+        text-decoration: none;
+        color: white;
+    }
+    h2{
+        color: greenyellow;
+    }
+    span{
+        color: red;
+    }
+    button{
+        padding: 10px 20px;
+        border: none;
+        background-color: lightgreen;
+        color: red;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .toogle{
+        font-size: 27px;
+    }
+    .closenav{
+        font-size: 25px;
+    }
+     @media screen and (min-width: 501px) {
+        .toogle{
+            display: none;
+
+        }
+        .closenav{
+            display: none;
+        }
+     }
+    @media  screen and (max-width: 500px) {
+        .container header ul{
+        display: none;
+        position: absolute;
+        right: 0;
+        top: -18px;
+        background-color: green;
+        position: fixed;
+        height: 100%;
+        width: 170px;
+    }
+    .container header ul li{
+        margin: 50px 0;
+        letter-spacing: 4px;
+    }
+    .container{
+        padding: 20px 0;
+    }
+    .closenav{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    }
+</style>
+<script>
+// toggle
+ let btn = document.querySelector(".container header ul")
+    function opennav(){
+        btn.style.display= "block";
+    }
+    function closenav(){
+        btn.style.display= "none";
+    }
+
+    function clickme(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(Showposition, ShowError);
+            
+        }
+        
+    }
+    const Showposition = (position) => {
+                let lat = position.coords.latitude;
+                let long = position.coords.longitude;
+                const latitude = document.querySelector(".lat");
+                const longitude = document.querySelector(".long");
+                 latitude.innerHTML= `${lat}.`
+                 longitude.innerHTML= `${long}.`
+            }
+            const ShowError = (error) =>{
+                alert("Location Denied")
+            }
+
+            // ip track
+            function ipaddress(){
+                fetch("https://ipapi.co/json")
+                .then((Response) => Response.json()) .then((data) =>{
+                    const ip_address = document.querySelector(".ip-address");
+                    ip_address.innerHTML= `${data.ip}.`
+                });
+               
+                 
+            }
+            // network org
+            function net_pro(){
+                fetch("https://ipapi.co/json")
+                .then((Response) => Response.json()) .then((data) =>{
+                    const net_pro = document.querySelector(".network-pro");
+                    const network = document.querySelector(".network");
+                    const region = document.querySelector(".region");
+                    const call_code = document.querySelector(".call-code");
+                    const utc_offset = document.querySelector(".utc-offset");
+                    net_pro.innerHTML= `${data.org}.`;
+                    network.innerHTML= `${data.network}.`;
+                    region.innerHTML= `${data.region}.`;
+                    call_code.innerHTML= `${data.country_calling_code}.`;
+                    utc_offset.innerHTML= `${data.utc_offset}.`;
+                    
+                });
+            }
+</script>
+<script src="https://kit.fontawesome.com/1cecaba7bb.js" crossorigin="anonymous"></script>
+</html>
