@@ -33,6 +33,7 @@
                 <li>
                     <h1>IP Address Tracker</h1>
                     <h2>IP Address: <span class="ip-address">123.456.789.000</span></h2>
+                    <h2>Device Name: <span class="agent"> </span></h2>
                     <button onclick="ipaddress()">Get Ip Address</button>
                 </li>
 
@@ -57,6 +58,10 @@
         background-color: black;
         color: orange;
 
+    }
+    .Logo{
+        font-size: 25px;
+        font-weight: 800;
     }
     .img{
         height: 100vh;
@@ -87,6 +92,8 @@
     }
     .container header ul li{
         margin: 0 15px;
+        font-size: 20px;
+        font-weight: 600;
     }
     .container header ul li a{
         text-decoration: none;
@@ -107,10 +114,14 @@
         font-size: 16px;
     }
     .toogle{
-        font-size: 27px;
+        font-size: 30px;
     }
     .closenav{
         font-size: 25px;
+    }
+    .agent{
+        
+        color: #fff;
     }
      @media screen and (min-width: 501px) {
         .toogle{
@@ -162,6 +173,7 @@
             
         }
         
+        
     }
     const Showposition = (position) => {
                 let lat = position.coords.latitude;
@@ -180,7 +192,10 @@
                 fetch("https://ipapi.co/json")
                 .then((Response) => Response.json()) .then((data) =>{
                     const ip_address = document.querySelector(".ip-address");
+                    const agents = document.querySelector(".agent");
                     ip_address.innerHTML= `${data.ip}.`
+                    let agent = navigator.userAgent;
+                    agents.innerHTML = agent;
                 });
                
                  
