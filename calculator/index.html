@@ -3,86 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Document</title>
 </head>
 <body>
     <div class="mainmenu">
-        <div class="container">
-            <div class="screen"></div>
-            <button>MR+</button>
-            <button>MR-</button>
-            <button>DEL</button>
-            <button>AC/ON</button>
+        <div class="content">
+            <div class="color-changer"></div>
+            <form action="#">
+                <input type="text" name="display" class="display">
 
-            <button class="Numeric-key" id="7">7</button>
-            <button class="Numeric-key" id="8">8</button>
-            <button class="Numeric-key" id="9">9</button>
-            <button class="operation-key" id="X">X</button>
-
-            <button class="Numeric-key" id="4">4</button>
-            <button class="Numeric-key" id="5">5</button>
-            <button class="Numeric-key" id="6">6</button>
-            <button class="operation-key" id="-">-</button>
-            
-            <button class="Numeric-key" id="1">1</button>
-            <button class="Numeric-key" id="2">2</button>
-            <button class="Numeric-key" id="3">3</button>
-            <button class="btn" class="operation-key" id="+">+</button>
-
-            <button class="Numeric-key" id="0">0</button>
-            <button class="Numeric-key" id=".">.</button>
-            <button class="operation-key" id="&divide;">&divide;</button>
-            <button class="span2" id="=">=</button>
+                <div class="operator">
+                    <input type="button" value="AC" onclick="display.value= '' " class="red">
+                <input type="button" value="C" onclick="display.value= display.value.toString().slice(0,-1) " class="red">
+                <input type="button" value="%" onclick="display.value+= '%' " class="ope">
+                <input type="button" value="-" onclick="display.value+= '-' " class="ope">
+                <input type="button" value="7" onclick="display.value+= '7' " class="num">
+                <input type="button" value="8" onclick="display.value+= '8' " class="num">
+                <input type="button" value="9" onclick="display.value+= '9' " class="num">
+                <input type="button" value="/" onclick="display.value+= '/' " class="ope">
+                <input type="button" value="4" onclick="display.value+= '4' " class="num">
+                <input type="button" value="5" onclick="display.value+= '5' " class="num">
+                <input type="button" value="6" onclick="display.value+= '6' " class="num">
+                <input type="button" value="*" onclick="display.value+= '*' " class="ope">
+                <input type="button" value="1" onclick="display.value+= '1' " class="num">
+                <input type="button" value="2" onclick="display.value+= '2' " class="num">
+                <input type="button" value="3" onclick="display.value+= '3' " class="num">
+                <input type="button" value="+" onclick="display.value+= '+' " class="ope">
+                <input type="button" value="0" onclick="display.value+= '0' " class="num">
+                <input type="button" value="." onclick="display.value+= '.' " class="num">
+                <input type="button" value="=" onclick="display.value= eval(display.value) " class="eval">  
+                </div>              
+            </form>
         </div>
     </div>
 </body>
 <style>
     body{
-        padding: 0;
         margin: 0;
+        padding: 0;
+        overflow: hidden;
         box-sizing: border-box;
     }
     .mainmenu{
+        background: linear-gradient(to right,purple,rgb(218, 51, 79));
         height: 100vh;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .container{
         display: grid;
-        grid-template-columns: repeat(4,80px);
-        border: 2px solid black;
+        place-items: center;
     }
-    .container button{
-        font-weight: 700;
-        margin: 4px;
-        padding: 10px 0;
-        background-color: cornflowerblue;
-        border: 1px solid #080008;
+    .content{
+        background: #000;
+        padding: 10px;
+        border-radius: 10px;
+        position: relative;
     }
-    .screen{
-        background-color: blueviolet;
-        margin: 5px;
-        padding: 1rem 0;
-        grid-column: span 4;
+    .operator{
+        display: grid;
+        grid-template-columns: repeat(4, 55px);
+        gap: 10px;
+        
     }
-    .span2{
-        grid-column: span 4;
-    }
-    .btn{
-        grid-row: span 2;
-    }
-    button:active{
-        background-color: brown;
-        color: aliceblue;
+    .operator input{
+        height: 55px;
+        font-size: 18px;
+        font-weight: 800;
+        border-radius: 50%;
         border: none;
     }
+    .operator input:hover{
+        transform: scale(1.1);
+        transition: .5s;
+    }
+    .display{
+        width: 250px;
+        height: 100px;
+        margin-bottom: 10px;
+        text-align: right;
+        font-size: 40px;
+        color: #fff;
+        background: none;
+        border: none ;
+        outline: none;
+        pointer-events: none;
+    }
+    .color-changer{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background: #fff;
+        margin: 0 0 10px 0;
+        
+    }
+    .eval{
+        grid-column: span 2;
+        border-radius: 30%;
+        background-color: rgb(38, 77, 28);
+    }
+    .num{
+        background-color: #1b2f38;
+        color: #fff;
+    }
+    .ope{
+        background-color: #2e1f39;
+        color: #aa00a4;
+    }
+    .red{
+        background-color: #2d191e;
+        color: #bd3740;
+    }
 </style>
-<script>
-    const display = document.querySelector(".screen")
-    const Numeric_key = document.querySelectorAll(".Numeric-key").values;
-    const operation_key = document.querySelectorAll(".operation-key").values;
-    
-</script>
 </html>

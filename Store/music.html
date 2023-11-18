@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <nav>
+                <ul> 
+                    <li>&LeftAngleBracket; </li>
+                    <li>&#8803</li>
+                </ul>
+            </nav>
+            <div class="img"><img src="../images/316943.jpg" id="img-src" alt="" srcset=""></div>
+            <div class="song-name">
+                <h3> For the Rest Of My Life</h3>
+                <p> By: <span>Maher Zain</span></p>
+            </div>
+            <audio   id="song">
+                <source src="./Maher_Zain_-_Humood_Tahayya_-_the_best_playlist_2022_-_tanpa_iklan(128k).m4a" type="">
+            </audio>
+            <input type="range" value="0" id="progress">
+            <div class="controls">
+                <div class="backward"><img src="../images/backward .png" alt=""></div>
+                <div class="play" onclick="pause()" id="ctrlicon"><img src="../images/play.png" alt=""></div>
+                <div class="forward"><img src="../images/forward .png" alt=""></div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let progress = document.getElementById("progress");
+    let song = document.getElementById("song");
+    let ctrlicon = document.getElementById("ctrlicon");
+
+    song.onloadedmetadata = function(){
+        progress.max = song.duration;
+        progress.value = song.currentTime;
+    }
+    function pause(){
+        if(ctrlicon.classList.contains(" ../images/pause.png")){
+            song.pause();
+            ctrlicon.classList.remove.src= "../images/play.png";
+            ctrlicon.classList.add.src= "../images/pause.png";
+        }else{
+            song.play();
+            ctrlicon.classList.remove("../images/pause.png");
+            ctrlicon.classList.add("&RightTriangle;");
+        }
+    }
+</script>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .container{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background: #333;
+    }
+    .content{
+        background: #fcb5c1;
+        width: 400px;
+        padding: 25px 35px;
+        text-align: center;
+        border-radius: 10px;
+        display: grid;
+    }
+    nav ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+    }
+    nav ul li{
+        background: white;
+        color: #f53192;
+        font-size: 20px;
+        font-weight: 900;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        text-align: center;
+        box-shadow: 0px 5px 10px rgba(255, 26, 26, 0.22);
+    }
+    .img img{
+        width: 200px;
+        height: 200px;
+        border: 6px solid #fff;
+        border-radius: 50%;
+        margin: 50px 0 10px 0;
+    }
+    .song-name{
+        color: #f53192;
+        margin: 10px;
+    }
+    .song-name p span{
+        font-weight: 700;
+    }
+    #progress{
+        -webkit-appearance: none;
+        width: 100%;
+        background: #f53192;
+        border-radius: 5px;
+        height: 6px;
+        margin: 30px 0;
+        cursor: pointer;
+    }
+    #progress::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        height: 20px;
+        width: 20px;
+        box-shadow: 0 5px 5px rgba(255, 26, 26, 0.466);
+        background: #f53192;
+        border-radius: 50%;
+        border: 1px solid #fff;
+    }
+    .controls{
+        display: flex;
+        justify-content: space-around;
+    }
+    .controls div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        color: #f53192;
+        background: #f8eff1;
+        font-weight: 900;
+        border-radius: 50%;
+        box-shadow: 0 5px 5px rgba(248, 38, 38, 0.308);
+        cursor: pointer;
+    }
+    .controls div img{
+        width: 20px;
+    }
+    .controls div:nth-child(2){
+        background-color: #f53192;
+        color: #fff;
+        transform: scale(1.5);
+    }
+</style>
+</html>
