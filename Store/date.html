@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+</head>
+<body>
+    </header>
+    <div class="content">
+        
+        <div class="container">
+            <div class="time">
+                <div class="" id="hours">00 </div>
+                <div>:</div>
+                <div class="" id="minutes">00 </div>
+                <div>:</div>
+                <div class="" id="seconds">00</div>
+                <div id="d_m"> </div>
+            </div>
+            <div class="week">TODAY IS <span id="week" ></span></div>
+            <div class="date">
+                <div class="" id="day"> </div>
+                <div>:</div>
+                <div class="" id="month"> </div>
+                <div>:</div>
+                <div class="" id="year"> </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    .content{
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        background: rgb(0, 0, 128);
+    }
+    .time{
+        font-size: 70px;
+        display: flex;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 900;
+    }
+    .date{
+        font-size: 40px;
+        display: flex;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 900;
+    }
+    .container{
+        height: 200px;
+        width: 450px;
+        position: relative;
+        background: transparent;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px 10px blue;
+        display: grid;
+        place-items: center;
+        color: aliceblue;
+    }
+    .container h1{
+        margin: 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: 5px;
+    }
+    #d_m{
+        font-size: 40px;
+        margin-left: 10px ;
+    }
+    .week{
+        font-size: 30px;
+        font-weight: 800;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    @media screen and (max-width: 500px) {
+        .week{
+        font-size: 30px;
+    }
+    .time{
+        font-size: 50px;
+    }
+    .date{
+        font-size: 30px;
+    }
+    .container{
+        height: 200px;
+        width: 90%;
+    }
+    }
+</style>
+<script>
+    const hours = document.getElementById("hours");
+    const minutes = document.getElementById("minutes");
+    const seconds = document.getElementById("seconds");
+    const days = document.getElementById("day");
+    const months = document.getElementById("month");
+    const years = document.getElementById("year");
+    const weeks = document.getElementById("week");
+    const am_pm = document.getElementById("d_m");
+
+    
+
+    setInterval(()=>{
+        let hour = (new Date().getHours()<10?"0" :"") + new Date().getHours();
+        let minute = (new Date().getMinutes()<10?"0":"") + new Date().getMinutes();
+        let second = (new Date().getSeconds()<10?"0":"") + new Date().getSeconds();
+        let day = new Date().getDate();
+        let month = new Date().getMonth();
+        let year = new Date().getFullYear();
+        let week = new Date().getDay();
+
+    let mnth = month + 1;
+    let daylist = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    
+    hours.innerHTML = hour
+    minutes.innerText = minute
+    seconds.innerText = second
+    days.innerText = day
+    months.innerText = mnth                            
+    years.innerText = year
+    weeks.innerText = daylist[week]
+
+    
+
+    },1000)
+    
+
+</script>
+</html>
