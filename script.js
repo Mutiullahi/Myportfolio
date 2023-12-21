@@ -64,6 +64,19 @@ function closepopup(){
 
 // for search items
 
+
+    const pass = document.getElementById("subject");
+    const eye = document.getElementById("eye");
+     function showpass(){
+        if(pass.type === "password"){
+            pass.type = "text";
+            eye.src = "./images/pngwing.com.png";
+        }else{
+            pass.type = "password";
+            eye.src = "./images/eye hide.png";
+        }
+     }
+
 const search = ()=> {
     const searchbox = document.getElementById("search-items").value.toUpperCase();
     const storeitems = document.getElementById("products-list");

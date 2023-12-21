@@ -294,11 +294,24 @@ body{
     border-radius: 5px;
     box-shadow: 0px 0px 10px 4px #ffff;
 }
+.passw{
+    position: relative;
+}
+.regu{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
 .comment form{
     display: grid;
     margin: 10px;
     font-size: 18px;
-    
+}
+.comment form img{
+    width: 20px;
+    position: absolute;
+    bottom: 20px;
+    right: 14px;
 }
 .comment form input,textarea{
     padding: 7px;
@@ -448,13 +461,6 @@ h2{
     height: 20rem;
     position: relative;
 }
-.works-list-four{
-    background: url("./images/store.jpg") no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-    height: 20rem;
-    position: relative;
-}
 .inks{
     background: linear-gradient(to top, rgba(224, 6, 6, 0.637), rgba(128, 0, 128, 0.707));
     height: 0;
@@ -568,7 +574,7 @@ h2{
     transition-property: transform;
 }
 .q3 h4, .q4 h4{
-    margin: 10px;
+    margin: 20px;
 }
 .openangles{
     transform: rotateX(180deg);
@@ -576,7 +582,7 @@ h2{
     color: #fff;
 }
 .open-q1{
-    height: 55px;
+    height: 60px;
     position: absolute;
     animation: q1;
     animation-duration: 1s;
@@ -584,7 +590,7 @@ h2{
 }
 @keyframes q1{
     from{
-        height: 55px;
+        height: 60px;
     }
     to{
         height: 300px;
@@ -592,7 +598,7 @@ h2{
 }
 
 .open-q2{
-    height: 55px;
+    height: 60px;
     position: absolute;
     animation: q2;
     animation-duration: 1s;
@@ -608,7 +614,7 @@ h2{
 }
 
 .open-q3{
-    height: 55px;
+    height: 60px;
     position: absolute;
     animation: q3;
     animation-duration: 1s;
@@ -632,7 +638,7 @@ h2{
 }
 @keyframes q4{
     from{
-        height: 55px;
+        height: 60px;
     }
     to{
         height: 1050px;
@@ -648,7 +654,7 @@ h2{
 }
 @keyframes q5{
     from{
-        height: 55px;
+        height: 60px;
     }
     to{
         height: 100px;
@@ -657,11 +663,11 @@ h2{
 .q1,.q2,.q3,.q4,.q5{
     position: relative;
     overflow: hidden;
-    height: 55px;
+    height: 70px;
 }
 
 .q1 h3, .q2 h3, .q3 h3, .q4 h3, .q5 h3{
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     position: relative;
     width: 87%;
 }
@@ -690,6 +696,7 @@ h2{
     position: absolute;
     display: none;
     width: 10rem;
+    right: 1px;
 }
 .open-register{
     display: block;
@@ -787,6 +794,7 @@ h2{
     border-radius: 5px;
     margin: 0 5%;
     display: none;
+    z-index: 1;
  }
  .openpopup{
     display: block;
@@ -832,7 +840,7 @@ h2{
  }
  .school h3, .school h4{
     top: 4rem;
-    padding: 10px;
+    padding: 15px;
     margin-left: 2rem;
     font-size: 20px;
  }

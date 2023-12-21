@@ -49,21 +49,27 @@
         </div>
     </div>
     <div class="comment">
-        <form action="#" method="POST" >
-        <label for="name"> First Name</label>
+        <form action="#" >
+        <label for="name"> User Name</label>
         <input type="text" name="First Name" id="First Name" placeholder="Enter your First Name" required autocomplete="off">
 
-        <label for="name"> Last Name</label>
+        <label for="name"> Full Name</label>
         <input type="text" name="Last Name" id="Last Name" placeholder="Enter your Last Name" required autocomplete="off">
 
         <label for="email">Email</label>
         <input type="email" name="Emaill address" id="email" placeholder="Enter your Email" required  autocomplete="off">
 
         <label for="password">Password</label>
+        <div class="passw">
+            <img src="./images/eye hide.png" alt="" onclick="showpass()" id="eye">
         <input type="password" name="Subject" id="subject" placeholder="Enter a password" required  autocomplete="off">
+        </div>
+        
+        <div class="reg">
+            <p>Already Have An Account Click <a href="./login.html">Here</a></p>
+        </div>
 
-
-        <button type="submit" id="btn">Register</button>
+        <button>Register</button>
         </form>
     </div>
 

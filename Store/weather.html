@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="color">
+                <div class="menu">
+                <div class="icon"><img src="../images/menu.png" alt=""></div>
+                <div class="icon"><img src="../images/dots.png" alt=""></div>
+                </div>
+                <div class="calender">
+                <div class="c">
+                    <h1 id="day"></h1>
+                    <h3> <span id="dates"> </span>
+                        <span id="Month">,</span>
+                        <span id="datelist"></span>
+                        <span id="year"></span>
+                    </h3>
+                </div>
+                <div class="t"><h2>
+                    <span id="hour"></span>
+                    <span>:</span>
+                    <span id="minute"></span>
+                    <span>:</span>
+                    <span id="second"></span>
+
+                </h2></div>
+            </div>
+        </div>
+
+        <div class="div_blur">
+            <div class="blur">
+                <div class="weather-img">
+                    <div class="img"><img src="../images/moon.png" alt=""></div>
+                    <div class="text">34"C</div>
+                </div>
+                <h2>PARTLY SUN</h2>
+            </div>
+        </div>
+
+        <div class="time">
+            <div class="clock">
+                <ul>
+                    <li>UV INDEX</li>
+                    <li>0 of 10</li>
+                </ul>
+
+                <ul>
+                    <li>WIND</li>
+                    <li>7 km/h</li>
+                </ul>
+
+                <ul>
+                    <li>PRESSURE</li>
+                    <li>1009 mb</li>
+                </ul>
+
+                <ul>
+                    <li>HUMIDITY</li>
+                    <li>59%</li>
+                </ul>
+
+                <ul>
+                    <li>DEW POINT</li>
+                    <li>15"</li>
+                </ul>
+
+                <ul>
+                    <li>VISIBILITY</li>
+                    <li>8 km</li>
+                </ul>
+            </div>
+
+            <div class="daylight">
+                <h3>DAYLIGHT</h3>
+                <div class="daylist">
+                    <div class="light">
+                        <h2>34"C</h2>
+                        <img src="../images/sun.png" alt="" width="50px">
+                        <p>6:00</p>
+                    </div>
+    
+                    <div class="light">
+                        <h2>34"C</h2>
+                        <img src="../images/cloudy.png" alt="" width="50px">
+                        <p>9:00</p>
+                    </div>
+    
+                    <div class="light">
+                        <h2>34"C</h2>
+                        <img src="../images/moon.png" alt="" width="50px">
+                        <p>12:00</p>
+                    </div>
+    
+                    <div class="light">
+                        <h2>34"C</h2>
+                        <img src="../images/sun.png" alt="" width="50px">
+                        <p>15:00</p>
+                    </div>
+    
+                    <div class="light">
+                        <h2>34"C</h2>
+                        <img src="../images/cloudy.png" alt="" width="50px">
+                        <p>18:00</p>
+                    </div>
+    
+                    <div class="light">
+                        <h2>34"C</h2>
+                        <img src="../images/half-moon.png" alt="" width="50px">
+                        <p>21:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: blue;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .text{
+        color: #fff;
+        font-size: 60px;
+        text-align: center;
+    }
+    .div_blur{
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+    .blur{
+        background-color: black;
+        border-radius: 15px;
+        position: absolute;
+        top: 11rem;
+        color: #fff;
+    }
+    .blur h2{
+        margin-left: 2rem;
+        font-size: 30px;
+    }
+    .container{
+        
+        height: 100vh;
+        width: 100%;
+        position: relative;
+    }
+    
+    .color{
+        width: 100%;
+        height: 350px;
+        background-color: #fff;
+        z-index: 999;
+        border-radius: 0 0 100% 100% / 50% 50%;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+    .icon{
+        background-color: white;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 1px 5px 5px rgb(116, 117, 117);
+    }
+    .icon img{
+        width: 20px;
+    }
+    .calender{
+        text-align: center;
+        margin: 30px 30px 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .calender h1, h3{
+        margin: 0;
+    }
+    .weather-img{
+        display: flex;
+        margin: 2rem;
+    }
+    .img{
+        background: rgb(53, 43, 43);
+        box-shadow: 1px 1px 20px 5px yellow;
+        height: 190px;
+        width: 190px;
+        border-radius: 100%;
+    }
+    .daylist{
+        display: flex;
+        overflow-x: auto;
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+    .daylight{
+        display: grid;
+        margin-left: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+    .light{
+        background-color: #948e8e;
+        margin: 5px 10px ;
+        text-align: center;
+        border-radius: 1rem;
+        padding: 0 25px;
+    }
+    .light h2{
+        margin: 5px;
+    }
+    .light p{
+        font-weight: 900;
+        margin: 5px;
+    }
+    .img img{
+        width: 190px;
+    }
+    .time{
+        display: flex;
+        justify-content: flex-start;
+        overflow: hidden;
+        margin: 10rem 2rem 0rem 2rem;
+    }
+    .clock{
+        background-color: #fff;
+        width: 400px;
+        text-align: center;
+        border-radius: 15px;
+    }
+    .clock ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px ;
+        margin: 10px;
+    }
+    .clock ul li{
+        margin: 0 5px 0 5px;
+        font-weight: 600;
+
+    }
+    @media screen and (min-width: 0) and (max-width: 500px) {
+    .time{
+        display: flex;
+        flex-direction: column;
+        margin: 10rem 1rem 0rem 1rem;
+        grid-template-columns: repeat(1, 95%);
+    }
+    .clock{
+        background-color: #fff;
+        width: 99%;
+        text-align: center;
+        border-radius: 15px;
+    }
+    .daylight{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    }
+</style>
+<script>
+    let hour = document.getElementById("hour");
+    let minute = document.getElementById("minute");
+    let second = document.getElementById("second");
+    let day = document.getElementById("day");
+    let date = document.getElementById("dates");
+    let month = document.getElementById("month");
+    let datelist = document.getElementById("datelist");
+    let year = document.getElementById("year")
+
+
+    setInterval(() => {
+        let hours = (new Date().getHours() < 10 ? "0" : "") + new Date().getHours();
+        let Minute = (new Date().getMinutes() < 10 ? "0" : "") + new Date().getMinutes();
+        let seconds = (new Date().getSeconds() < 10 ? "0" : "") + new Date().getSeconds();
+
+        let days = new Date().getDay();
+        let getdaylist = new Date().getMonth();
+        let dates = new Date().getMonth() + 1;
+        let years = new Date().getFullYear();
+        let datelists = ["January", "Febuary" , "March" , "April" , "May" , "June" , "July" , "August" , "September" , "October" , "November" , "December"]
+        let daylist = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        hour.innerText = hours
+        minute.innerText = Minute
+        second.innerText = seconds
+        day.innerText = daylist[days]
+        date.innerHTML = dates
+        datelist.innerHTML = datelists[getdaylist]
+        year.innerHTML = years
+
+        
+    }, 1000);
+    
+
+
+</script>
+</html>
