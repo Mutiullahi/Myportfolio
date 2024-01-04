@@ -899,13 +899,14 @@ h2{
  .products-list{
     margin: 20px 0px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 0fr));
     grid-gap: 2rem;
  }            
  .product{
     border: 1px solid white;
     box-shadow: 1px 1px 10px 1px white;
     text-align: center;
+    width: 100%;
  }
  .product p{
     font-size: 18px;
@@ -918,6 +919,7 @@ h2{
  }
  .product img{
     width: 90%;
+    object-fit: cover;
  }
  .products-link ul{
     display: flex;
@@ -1039,6 +1041,9 @@ h2{
      .logo{
         color: lightblue;
      }
+     .products-list{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     } 
 }
 /* for android */
 @media screen and (min-width: 0px) and (max-width: 566px) {
@@ -1163,5 +1168,8 @@ h2{
     .logo{
         color: lightblue;
         font-size: 23px;
+     }
+     .products-list{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
      }
 }

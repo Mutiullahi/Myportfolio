@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainmenu">
+        <h2>AIRTEL (PRIMARY) ANALYSIS</h2>
+
+        <div class="content">
+            <p><strong>NOTE:</strong> Airtel Sells there Stock out at the rate of <strong>95.83</strong> with tax rate</p>
+            <div>
+                <div class="label">
+                    <label for="Selling">Selling Price :</label>
+                    <input type="tel" id="Selling"  placeholder="Enter Your Selling Price"  maxlength="5">
+                </div>
+
+                <div class="label">
+                    <label for="Customer">Customer Buying Price :</label>
+                    <input type="tel" id="Customer" placeholder="Enter Your Customer Price">
+                </div>
+
+                <div class="label">
+                    <h3 for="total">Airtel Selling Price  :</h3>
+                    <p id="Airtelsell"></p>
+                </div>
+
+                <div class="label">
+                    <h3 for="total">Total Cost :</h3>
+                    <p id="totalcost"></p>
+                </div>
+
+                <div class="label">
+                    <h3 for="Loss">Loss Price :</h3>
+                    <p id="Loss"></p>
+                </div>
+
+
+                <p><strong>NOTE : </strong> Airtel backend payment is <b>0.5%</b> of your stock you did</p>
+
+                <div class="label">
+                    <h4>Backup payment :</h4>
+                    <p id="Backend"></p>
+                </div>
+
+                <div class="label">
+                    <h4>Therefore : </h4>
+                    <p id="gain"></p>
+                    <p id="loss"></p>
+                </div>
+                <div class="btn">
+                    <button onclick="SubmitButton()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .mainmenu{
+        margin-left: 1rem;
+    }
+    .mainmenu h2{
+        text-align: center;
+        
+    }
+    .label{
+        display: flex;
+        margin: 1rem;
+    }
+    .label input{
+        padding: 5px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid black;
+        outline: none;
+    }
+    .label label, .label h4, .label h3{
+        margin-right: 1rem;
+    }
+    #gain{
+        color: green;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    #loss{
+        color: red;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    button{
+        padding: 10px 0 ;
+        background-color: blue;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 2rem;
+        color: aliceblue;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .btn{
+        display: grid;
+        margin:  0 20%;
+    }
+</style>
+<script>
+        let Loss = document.getElementById("Loss");
+    let TotalCost = document.getElementById("totalcost");
+    let Total = document.getElementById("Backend");
+    let sellingPrice = document.getElementById("Selling");
+    let customer = document.getElementById("Customer");
+    let button = document.getElementById("button");
+    let Airtelsell = document.getElementById("Airtelsell");
+    let gain = document.getElementById("gain");
+    let loss2 = document.getElementById("loss");
+
+    
+    function SubmitButton(){
+        // getting values
+        let sellprice = sellingPrice.value;
+        let cus = customer.value
+
+        let cp = 95.83 * cus;
+        let loss  = cp - sellprice * cus
+         TotalCost.innerHTML = sellprice * cus
+         Loss.innerHTML = loss
+         Airtelsell.innerHTML = cp
+
+         let finaltotal = cp / 100 * 0.5
+         Total.innerHTML = finaltotal
+
+         let gainloss = finaltotal - loss
+
+         if (gainloss >= 0){
+            gain.innerHTML = "you gain a total amount of " + gainloss
+         }else{
+            loss2.innerHTML = "you Loss a total amount of" + gainloss
+         }
+    }
+
+</script>
+</html>
