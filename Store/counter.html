@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+</head>
+<body>
+    <div class="mainmenu">
+        <p>Counter</p>
+        <div class="display"></div>
+        <div class="btn">
+            <button class="r" onclick="resetbtn()">Reset</button>
+            <button class="p" onclick="addbtn()">+</button>
+        </div>
+    </div>
+</body>
+<style>
+    body{
+        margin: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+    .mainmenu p{
+        margin: 0 0 5px 0;
+        font-weight: bold;
+        letter-spacing: 4px;
+    }
+    .mainmenu{
+        text-align: center;
+        border: 1px solid;
+        padding: 10px;
+        width: 150px;
+        border-radius: 5px;
+    }
+    .display{
+        border: 1px solid;
+        text-align: right;
+        font-size: 30px;
+        padding-right: 4px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    .btn{
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn .r{
+        background-color: red;
+        padding: 5px;
+        border: none;
+        color: white;
+    }
+    .btn .p{
+        height: 40px;
+        width: 40px;
+        background-color: green;
+        border: none;
+        color: #fff;
+        border-radius: 50%;
+    }
+</style>
+<script>
+    let display = document.querySelector(".display");
+    let counter = 0
+    function resetbtn(){
+        display.innerHTML = counter  = 0
+    }
+
+    function addbtn(){
+        counter+=1
+        display.innerHTML = counter
+    }
+    display.innerHTML = counter
+</script>
+</html>
